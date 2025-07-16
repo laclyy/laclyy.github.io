@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^$ pagina.html [L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/pagina\.html [NC]
+RewriteRule ^pagina\.html$ / [R=301,L]
