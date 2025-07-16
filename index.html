@@ -1,0 +1,408 @@
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0CTM2SBJJ"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag("js", new Date());
+
+                    gtag("config", "G-T0CTM2SBJJ");
+                </script>
+                <style>
+                    img {
+                        border-radius: 10px;
+                    }
+                    .logodesc {
+                        margin-top: 1rem;
+                    }
+
+                    @media only screen and (max-width: 756px) {
+                        .logodesc {
+                            margin-top: 0.45rem;
+                        }
+                    }
+                </style>
+                <style>
+                    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUp 0.8s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-card:nth-child(1) { animation-delay: 0.1s; }
+        .video-card:nth-child(2) { animation-delay: 0.2s; }
+        .video-card:nth-child(3) { animation-delay: 0.3s; }
+        .video-card:nth-child(4) { animation-delay: 0.4s; }
+        .video-card:nth-child(5) { animation-delay: 0.5s; }
+        .video-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .video-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .video-embed {
+            width: 100%;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .video-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .video-embed.placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+            border: 2px dashed #ddd;
+            background: #f8f9fa;
+        }
+
+        .video-embed:not(.placeholder) {
+            border: none;
+            background: transparent;
+        }
+
+        .video-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px 30px 0 0;
+            margin-top: 60px;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .video-card {
+                padding: 20px;
+            }
+            
+            .video-embed {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 40px 0;
+            }
+        }
+
+        /* Animazioni fluide per gli hover */
+        .video-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Effetto particelle animate */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+                <link
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+                    rel="stylesheet"
+                    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                    crossorigin="anonymous"
+                />
+                <link rel="icon" href="logo.png" type="image/png" />
+                <link rel="shortcut icon" href="logo.png" type="image/png" />
+                <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+                <link rel="stylesheet" href="style.css" />
+                <link rel="stylesheet" href="style-dark.css" />
+                <link rel="stylesheet" href="animations.css" />
+                <script src="animations.js"></script>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>titolo da king</title>
+            </head>
+            <body>
+                    <div class="particles" id="particles"></div>
+    
+    <header class="fadeup ombra">
+        <div class="container">
+            <h1>King Showcase</h1>
+            <p class="subtitle" style="font-family:Poppins">testo da king</p>
+        </div>
+    </header>
+                <div style="margin: auto; max-width: 1920px; font-family: Poppins" class="testobianco">
+                    <div class="d-flex justify-content-around image-container edits" style="margin: auto; padding-top: 3rem">
+                <div style="margin-bottom: 30px" class="fadeup">
+                    <div>
+                        <iframe
+                            allow="fullscreen;autoplay"
+                            allowfullscreen
+                            height="400"
+                            src="https://streamable.com/e/41cdia?"
+                            width="320"
+                            class="ombra video-frame"
+                            style="border-radius: 7px; margin: auto; display: block; margin-top: 3%; margin-left: 10px; margin-right: 10px; margin-bottom: 10px"
+                            id="23"
+                        ></iframe>
+                    </div>
+                                        <p class="text text-center" style="margin-bottom: 0"><img src="user-svgrepo-com.svg" class="logodesc" style="width: 20px" />king embed</p>
+                    <p class="text text-center"><img src="music-svgrepo-com.svg" class="logodesc" style="width: 20px; border-radius: 0" /> king</p>
+                </div>
+                <div style="margin-bottom: 30px" class="fadeup">
+                    <div>
+                        <img src="a2d9154701abc72b3c86cfb9503972b9.jpg" class="ombra video-frame" style="border-radius: 7px; margin: auto; display: block; margin-top: 3%; margin-left: 10px; margin-right: 10px; margin-bottom: 10px; max-width:320px; max-height: 400px;">
+                    </div>
+                    <p class="text text-center" style="margin-bottom: 0"><img src="user-svgrepo-com.svg" class="logodesc" style="width: 20px" />king jpg</p>
+                    <p class="text text-center"><img src="music-svgrepo-com.svg" class="logodesc" style="width: 20px; border-radius: 0" /> king</p>
+                </div>
+                <div style="margin-bottom: 30px" class="fadeup">
+                    <div>
+                        <img src="gokusegone-quadrato.gif" class="ombra video-frame" style="border-radius: 7px; margin: auto; display: block; margin-top: 3%; margin-left: 10px; margin-right: 10px; margin-bottom: 10px; max-width:320px; max-height: 400px;">
+                    </div>
+                    <p class="text text-center" style="margin-bottom: 0"><img src="user-svgrepo-com.svg" class="logodesc" style="width: 20px" />king gif</p>
+                    <p class="text text-center"><img src="music-svgrepo-com.svg" class="logodesc" style="width: 20px; border-radius: 0" /> king</p>
+                </div>
+                <div style="margin-bottom: 30px" class="fadeup">
+                    <div>
+                        <img src="easy.png" class="ombra video-frame" style="border-radius: 7px; margin: auto; display: block; margin-top: 3%; margin-left: 10px; margin-right: 10px; margin-bottom: 10px; max-width:320px; max-height: 400px;" type="image/png" >
+                    </div>
+                    <p class="text text-center" style="margin-bottom: 0"><img src="user-svgrepo-com.svg" class="logodesc" style="width: 20px" />king png</p>
+                    <p class="text text-center"><img src="music-svgrepo-com.svg" class="logodesc" style="width: 20px; border-radius: 0" /> king</p>
+                </div>
+                    </div>
+                    <p class="text-center fadeup" style="margin-top: 20px">
+                        <a href="" class="text linkbianco" style="  font-family:Poppins ">link da king</a>
+                    </p>
+                </div>
+                <footer class="fadeup ombra">
+        <div class="container" style="font-family:Poppins">
+            <p class="footer-text">© 2025 footer da king.</p>
+        </div>
+                </footer>
+                    <script>
+                    function createParticles() {
+                        const particlesContainer = document.getElementById('particles');
+                        const particleCount = 50;
+
+                        for (let i = 0; i < particleCount; i++) {
+                            const particle = document.createElement('div');
+                            particle.classList.add('particle');
+                            particle.style.left = Math.random() * 100 + '%';
+                            particle.style.animationDelay = Math.random() * 6 + 's';
+                            particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                            particlesContainer.appendChild(particle);
+                        }
+                    }
+
+                    function animateOnScroll() {
+                        const cards = document.querySelectorAll('.video-card');
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.style.animation = 'slideUp 0.8s ease-out forwards';
+                                }
+                            });
+                        }, { threshold: 0.1 });
+
+                        cards.forEach(card => {
+                            observer.observe(card);
+                        });
+                    }
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        createParticles();
+                        animateOnScroll();
+                    });
+
+                    window.addEventListener('scroll', () => {
+                        const scrolled = window.pageYOffset;
+                        const particles = document.getElementById('particles');
+                        particles.style.transform = `translateY(${scrolled * 0.5}px)`;
+                    });
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const images = document.querySelectorAll('img.ombra');
+                        images.forEach(img => {
+                            if (img.src.toLowerCase().endsWith('.png') || img.getAttribute('type') === 'image/png') {
+                                img.classList.remove('ombra');
+                            }
+                        });
+                    });
+                    </script>
+                <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                    crossorigin="anonymous"
+                ></script>
+            </body>
+        </html> 
+    </body>
+</html>
