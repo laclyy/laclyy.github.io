@@ -35,8 +35,21 @@ export function detectSource(url: string, declared?: VideoSource): VideoSource {
   if (/youtu\.be|youtube\.com/i.test(url)) return 'youtube'
   if (/vimeo\.com/i.test(url)) return 'vimeo'
   if (/dailymotion\.com|dai\.ly/i.test(url)) return 'dailymotion'
-  if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(url) && !/^https?:/i.test(url)) return 'local'
+  if (isDirectMediaUrl(url)) return /^https?:/i.test(url) ? 'direct' : 'local'
   return 'external'
+}
+
+export function isDirectMediaSource(video: Pick<VideoItem, 'source' | 'videoUrl'>): boolean {
+  const source = detectSource(video.videoUrl, video.source)
+  return source === 'local' || source === 'direct' || source === 'cloud'
+}
+
+export function isDirectMediaUrl(url: string): boolean {
+  return /\.(mp4|m4v|webm|ogg|ogv|mov|m3u8)(?:[?#].*)?$/i.test(url)
+}
+
+export function isImageMediaUrl(url: string): boolean {
+  return /\.(avif|webp|jpe?g|png|gif|svg)(?:[?#].*)?$/i.test(url)
 }
 
 export function embedUrl(video: VideoItem): string | null {

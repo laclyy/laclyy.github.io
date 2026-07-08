@@ -3,8 +3,10 @@
     "Aggiungi un video copiando un elemento dentro videos e cambiando i valori.",
     "type: usa my-edit oppure commissioned.",
     "category: usa anime, videogiochi oppure altro.",
-    "source: usa local, youtube, vimeo, dailymotion oppure external.",
+    "source: usa local, direct, cloud, youtube, vimeo, dailymotion oppure external.",
     "Per un file locale, videoUrl deve essere per esempio videos/mio-edit.mp4.",
+    "Per un MP4/WebM/MOV caricato su un cloud, inserisci l'URL diretto del file in videoUrl e usa source: direct oppure cloud.",
+    "aspectRatio è opzionale: puoi usarlo per forzare formati come 16/9, 9/16, 1/1 oppure 4/5.",
     "Imposta featured su true per mostrare il video anche in home."
   ],
   "videos": [

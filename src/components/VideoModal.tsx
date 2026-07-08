@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { ExternalLink, X } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { publicUrl } from '../lib/content'
-import { detectSource, embedUrl } from '../lib/videos'
+import { detectSource, embedUrl, isDirectMediaSource, isImageMediaUrl } from '../lib/videos'
 import type { VideoItem } from '../types'
 
 export default function VideoModal({ video, onClose }: { video: VideoItem | null; onClose: () => void }) {
@@ -38,7 +38,72 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
 function Player({ video }: { video: VideoItem }) {
   const source = detectSource(video.videoUrl, video.source)
   const embed = embedUrl(video)
-  if (source === 'local') return <div className="aspect-video bg-black"><video controls preload="none" poster={publicUrl(video.thumbnailUrl || 'thumbnails/fallback.svg')} className="h-full w-full" playsInline><source src={publicUrl(video.videoUrl)} />Your browser does not support HTML5 video.</video></div>
-  if (embed) return <div className="aspect-video bg-black"><iframe src={embed} title={video.title} className="h-full w-full" allow="fullscreen; picture-in-picture; encrypted-media" allowFullScreen loading="lazy" /></div>
+  if (isDirectMediaSource(video)) return <DirectMediaPlayer video={video} />
+  if (embed) return <EmbedPlayer video={video} embed={embed} />
   return <div className="grid aspect-video place-items-center bg-[radial-gradient(circle_at_center,rgba(255,61,32,.16),transparent_55%)] p-8 text-center"><div><span className="font-mono text-[10px] uppercase tracking-[.18em] text-flame">External platform</span><h3 className="mt-3 font-display text-2xl">This video opens on its original platform.</h3><a href={publicUrl(video.videoUrl)} target="_blank" rel="noreferrer" className="button-primary mt-6">Open video <ExternalLink size={15} /></a></div></div>
+}
+
+function DirectMediaPlayer({ video }: { video: VideoItem }) {
+  const [ratio, setRatio] = useState(normalizeRatio(video.aspectRatio))
+  const [failed, setFailed] = useState(false)
+  const mediaUrl = publicUrl(video.videoUrl)
+  const poster = publicUrl(video.thumbnailUrl || 'thumbnails/fallback.svg')
+
+  if (isImageMediaUrl(video.videoUrl)) {
+    return (
+      <div className="media-stage">
+        <img src={mediaUrl} alt={video.title} loading="lazy" decoding="async" className="media-element" style={ratio ? { aspectRatio: ratio } : undefined} onLoad={(event) => {
+          const image = event.currentTarget
+          if (!ratio && image.naturalWidth && image.naturalHeight) setRatio(`${image.naturalWidth} / ${image.naturalHeight}`)
+        }} />
+      </div>
+    )
+  }
+
+  return (
+    <div className="media-stage">
+      {failed ? (
+        <div className="max-w-md p-8 text-center">
+          <span className="font-mono text-[10px] uppercase tracking-[.18em] text-flame">Browser playback unavailable</span>
+          <h3 className="mt-3 font-display text-2xl">This media format cannot be played directly here.</h3>
+          <p className="mt-3 text-sm leading-6 text-white/45">The viewer supports browser-compatible cloud videos such as MP4, WebM, OGG and compatible MOV files. You can still open the original file.</p>
+          <a href={mediaUrl} target="_blank" rel="noreferrer" className="button-primary mt-6">Open media <ExternalLink size={15} /></a>
+        </div>
+      ) : (
+        <video
+          controls
+          playsInline
+          preload="none"
+          poster={poster}
+          className="media-element"
+          style={ratio ? { aspectRatio: ratio } : undefined}
+          onLoadedMetadata={(event) => {
+            const element = event.currentTarget
+            if (element.videoWidth && element.videoHeight) setRatio(`${element.videoWidth} / ${element.videoHeight}`)
+          }}
+          onError={() => setFailed(true)}
+        >
+          <source src={mediaUrl} />
+          Your browser does not support HTML5 video.
+        </video>
+      )}
+    </div>
+  )
+}
+
+function EmbedPlayer({ video, embed }: { video: VideoItem; embed: string }) {
+  const ratio = normalizeRatio(video.aspectRatio)
+  return (
+    <div className="media-stage">
+      <div className="w-full max-w-full" style={{ aspectRatio: ratio || '16 / 9', maxHeight: 'min(78vh, 820px)' }}>
+        <iframe src={embed} title={video.title} className="h-full w-full" allow="fullscreen; picture-in-picture; encrypted-media" allowFullScreen loading="lazy" />
+      </div>
+    </div>
+  )
+}
+
+function normalizeRatio(value?: string): string | undefined {
+  if (!value) return undefined
+  const normalized = value.trim().replace(':', ' / ')
+  return /^\d+(\.\d+)?\s*\/\s*\d+(\.\d+)?$/.test(normalized) ? normalized : undefined
 }

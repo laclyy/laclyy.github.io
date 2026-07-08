@@ -54,6 +54,7 @@ Apri `public/data/videos.json`. Dentro la sezione `videos`, copia un blocco esis
   "thumbnailUrl": "https://esempio.com/thumbnail.jpg",
   "videoUrl": "https://www.youtube.com/watch?v=ID_VIDEO",
   "source": "youtube",
+  "aspectRatio": "16/9",
   "tags": ["anime", "dark", "sync"],
   "featured": true,
   "date": "2026-07-03"
@@ -65,7 +66,8 @@ Valori disponibili:
 - `type`: `my-edit` oppure `commissioned`.
 - `category`: `anime`, `videogiochi` oppure `altro`.
 - `style`: `simple edit`, `vibe edit`, `typography`, `promo edit`, `flow edit`, `cinematic edit`, `amv`, `gmv` oppure `altro`.
-- `source`: `local`, `youtube`, `vimeo`, `dailymotion` oppure `external`.
+- `source`: `local`, `direct`, `cloud`, `youtube`, `vimeo`, `dailymotion` oppure `external`.
+- `aspectRatio`: opzionale. Serve soprattutto per embed o media particolari. Puoi usare `16/9`, `9/16`, `1/1`, `4/5`, ecc.
 - `date`: usa sempre il formato anno-mese-giorno, per esempio `2026-07-03`. L’archivio usa questa data per mostrare prima i lavori più recenti.
 - `tags`: parole utili per la ricerca interna, ognuna tra virgolette.
 
@@ -77,12 +79,34 @@ Per mostrare un video nella Home imposta `"featured": true`. Usa `false` per las
 
 È la modalità consigliata. Copia in `videoUrl` il link completo del video e imposta `source`:
 
+- File video diretto su cloud: `direct` oppure `cloud`
 - YouTube: `youtube`
 - Vimeo: `vimeo`
 - Dailymotion: `dailymotion`
 - TikTok, Instagram o qualsiasi altro sito: `external`
 
-YouTube, Vimeo e Dailymotion vengono incorporati nella modale. TikTok, Instagram e i link non riconosciuti mostrano un bottone che apre la piattaforma originale. Nessun player viene caricato finché una persona non apre la modale.
+I file video diretti su cloud vengono riprodotti nella modale con il player HTML5 del browser. YouTube, Vimeo e Dailymotion vengono incorporati nella modale. TikTok, Instagram e i link non riconosciuti mostrano un bottone che apre la piattaforma originale. Nessun player viene caricato finché una persona non apre la modale.
+
+Esempio con MP4 caricato sul tuo cloud:
+
+```json
+{
+  "title": "Vertical Edit",
+  "description": "Short vertical edit hosted on our cloud.",
+  "type": "my-edit",
+  "category": "altro",
+  "style": "flow edit",
+  "thumbnailUrl": "https://tuo-cloud.com/thumbs/vertical-edit.jpg",
+  "videoUrl": "https://tuo-cloud.com/videos/vertical-edit.mp4",
+  "source": "cloud",
+  "aspectRatio": "9/16",
+  "tags": ["vertical", "sync", "short"],
+  "featured": false,
+  "date": "2026-07-08"
+}
+```
+
+Il viewer si adatta automaticamente ai video orizzontali, verticali, quadrati e 4:5. Per i file diretti prova a usare formati compatibili con i browser moderni: MP4/H.264 è la scelta più sicura, WebM è ok, MOV funziona solo se il codec è supportato dal browser del visitatore.
 
 ## Video locali MP4
 
@@ -94,7 +118,7 @@ Usa questa modalità soltanto per edit brevi, ben compressi e sotto 20 MB.
 
 Il file viene caricato soltanto all’apertura della modale con `preload="none"`. Le card caricano esclusivamente la thumbnail.
 
-Non caricare video pesanti nel repository: rendono download, deploy e navigazione molto più lenti, consumano banda e possono superare i limiti di GitHub. Per video lunghi o ad alta qualità usa YouTube, Vimeo o Dailymotion.
+Non caricare video pesanti nel repository: rendono download, deploy e navigazione molto più lenti, consumano banda e possono superare i limiti di GitHub. Per video lunghi o ad alta qualità usa il tuo cloud, YouTube, Vimeo o Dailymotion.
 
 ## Thumbnail
 

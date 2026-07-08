@@ -1,5 +1,5 @@
 export type VideoType = 'my-edit' | 'commissioned'
-export type VideoSource = 'local' | 'youtube' | 'vimeo' | 'dailymotion' | 'external'
+export type VideoSource = 'local' | 'direct' | 'cloud' | 'youtube' | 'vimeo' | 'dailymotion' | 'external'
 
 export interface VideoItem {
   title: string
@@ -10,6 +10,7 @@ export interface VideoItem {
   thumbnailUrl: string
   videoUrl: string
   source: VideoSource
+  aspectRatio?: string
   tags: string[]
   featured: boolean
   date: string
