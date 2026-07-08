@@ -1,0 +1,22 @@
+{
+  "_help": "Modifica solo i testi dopo i due punti. Mantieni virgolette, virgole e parentesi esattamente come sono.",
+  "name": "LACLY",
+  "role": "Italian video editor",
+  "shortDescription": "I'm Lacly. I turn rhythm, imagery, and sound into edits that leave a mark.",
+  "longDescription": "I create high-impact videos for creators, brands, and communities. Every edit starts with a clear idea: find the right rhythm, build tension, and give every frame a reason to be there.",
+  "styleDescription": "My style blends precise sync, cinematic atmosphere, and dynamic typography. From the chaos of a gaming edit to the tension of an anime sequence, I always aim for a distinct visual identity.",
+  "email": "email@example.com",
+  "location": "Italy · available worldwide",
+  "heroEyebrow": "Lacly · Italian video editor · 2026",
+  "heroTitle": "I cut the noise. I leave a mark.",
+  "heroText": "Editing, sound design, and motion typography for stories worth replaying.",
+  "primaryCtaText": "View my work",
+  "secondaryCtaText": "Contact me",
+  "featuredTitle": "Selected work",
+  "featuredText": "A selection of personal edits and commissioned projects, built frame by frame.",
+  "strengthsTitle": "More than a clean cut.",
+  "strengthsText": "Every project balances technique, instinct, and a slightly unreasonable number of replays.",
+  "contactTitle": "Have an idea? Let's give it rhythm.",
+  "contactText": "Tell me about the project, the mood, and the deadline. I'll get back to you with availability, timing, and a clear creative direction.",
+  "commissionCtaText": "Commission an edit"
+}

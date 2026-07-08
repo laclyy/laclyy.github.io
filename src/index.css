@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; background: #080706; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #080706; font-family: Manrope, sans-serif; }
+* { box-sizing: border-box; }
+::selection { background: rgba(239, 8, 43, .42); color: white; }
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: #080706; }
+::-webkit-scrollbar-thumb { background: #2b201a; border: 2px solid #080706; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #5b2b1c; }
+
+@layer components {
+  .shell { @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16; }
+  .section-space { @apply py-24 md:py-32 lg:py-40; }
+  .eyebrow { @apply flex items-center gap-3 font-mono text-[9px] uppercase tracking-[.18em] text-white/40 sm:text-[10px]; }
+  .text-gradient { @apply bg-clip-text text-transparent; background-image: linear-gradient(90deg, #d90724 0%, #ff2038 62%, #ffd43b 100%); }
+  .focus-ring { @apply outline-none focus-visible:ring-2 focus-visible:ring-flame/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ink; }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#d90724] to-[#ff2038] px-5 text-xs font-bold text-white shadow-[0_8px_30px_rgba(225,5,37,.25)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_38px_rgba(239,8,43,.38)] focus-ring; }
+  .button-secondary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[.035] px-5 text-xs font-semibold text-white/72 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[.07] hover:text-white focus-ring; }
+  .link-arrow { @apply inline-flex items-center gap-2 text-xs font-semibold text-white/50 transition hover:gap-3 hover:text-flame focus-ring; }
+  .section-heading { @apply flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between; }
+  .section-heading h2 { @apply mt-5 font-display text-4xl font-semibold tracking-[-.045em] sm:text-5xl md:text-6xl; }
+  .section-heading p { @apply mt-4 max-w-xl text-sm leading-6 text-white/45 md:text-base md:leading-7; }
+  .form-label { @apply mb-2.5 block font-mono text-[9px] uppercase tracking-[.15em] text-white/35; }
+  .form-input { @apply w-full rounded-xl border border-white/[.09] bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/20 focus:border-flame/60 focus:ring-2 focus:ring-flame/10; }
+}
+
+.hero-orb {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 212, 59, .13) 0 3%, rgba(255, 28, 52, .24) 14%, rgba(139, 4, 25, .15) 42%, transparent 68%),
+    conic-gradient(from 200deg, transparent, rgba(225, 5, 37, .19), transparent 46%);
+  filter: blur(4px);
+}
+
+.hero-orb::before,
+.hero-orb::after {
+  content: '';
+  position: absolute;
+  inset: 15%;
+  border: 1px solid rgba(255, 32, 56, .20);
+  border-radius: 50%;
+}
+.hero-orb::after { inset: 31%; border-color: rgba(255, 212, 59, .18); }
+
+.contact-glow {
+  background: radial-gradient(circle, rgba(255, 212, 59, .17), rgba(239, 8, 43, .31) 26%, rgba(121, 2, 22, .13) 48%, transparent 72%);
+  filter: blur(8px);
+}
+
+.bg-grid {
+  background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

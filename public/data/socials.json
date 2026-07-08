@@ -1,0 +1,33 @@
+{
+  "_help": "Puoi aggiungere o rimuovere social seguendo la stessa struttura. Lascia url vuoto per nascondere un contatto.",
+  "discord": {
+    "label": "Discord",
+    "username": "lacly",
+    "url": "mailto:email@example.com"
+  },
+  "instagram": {
+    "label": "Instagram",
+    "username": "@lacly",
+    "url": "mailto:email@example.com"
+  },
+  "tiktok": {
+    "label": "TikTok",
+    "username": "@lacly",
+    "url": "mailto:email@example.com"
+  },
+  "youtube": {
+    "label": "YouTube",
+    "username": "Lacly",
+    "url": "mailto:email@example.com"
+  },
+  "x": {
+    "label": "X / Twitter",
+    "username": "@lacly",
+    "url": "mailto:email@example.com"
+  },
+  "email": {
+    "label": "Email",
+    "value": "email@example.com",
+    "url": "mailto:email@example.com"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "_instructions": [
+    "Aggiungi un video copiando un elemento dentro videos e cambiando i valori.",
+    "type: usa my-edit oppure commissioned.",
+    "category: usa anime, videogiochi oppure altro.",
+    "source: usa local, youtube, vimeo, dailymotion oppure external.",
+    "Per un file locale, videoUrl deve essere per esempio videos/mio-edit.mp4.",
+    "Imposta featured su true per mostrare il video anche in home."
+  ],
+  "videos": [
+    {
+      "title": "Crimson Pulse",
+      "description": "Dark anime vibe edit with sharp sync, controlled impact and cinematic pacing.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "thumbnails/crimson-pulse.svg",
+      "videoUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+      "source": "youtube",
+      "tags": ["anime", "dark", "sync", "cinematic"],
+      "featured": true,
+      "date": "2026-07-03"
+    },
+    {
+      "title": "Zero Hour",
+      "description": "Fast gaming montage driven by speed ramps, clean transitions and hard-hitting sound design.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "thumbnails/zero-hour.svg",
+      "videoUrl": "https://vimeo.com/76979871",
+      "source": "vimeo",
+      "tags": ["gaming", "gmv", "action", "sync"],
+      "featured": true,
+      "date": "2026-06-18"
+    },
+    {
+      "title": "Kinetic Type 01",
+      "description": "Experimental typography study built around rhythm, contrast and graphic motion.",
+      "type": "my-edit",
+      "category": "altro",
+      "style": "typography",
+      "thumbnailUrl": "thumbnails/kinetic-type.svg",
+      "videoUrl": "https://www.dailymotion.com/video/x8om9f0",
+      "source": "dailymotion",
+      "tags": ["typography", "motion", "experimental"],
+      "featured": true,
+      "date": "2026-05-26"
+    },
+    {
+      "title": "Afterglow",
+      "description": "A warm, atmospheric flow edit focused on visual continuity and soft musical accents.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "flow edit",
+      "thumbnailUrl": "thumbnails/afterglow.svg",
+      "videoUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+      "source": "youtube",
+      "tags": ["anime", "flow", "atmospheric"],
+      "featured": false,
+      "date": "2026-04-11"
+    },
+    {
+      "title": "Neon Division",
+      "description": "Cinematic game trailer concept with dramatic build-up and a dense, textured finish.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "cinematic edit",
+      "thumbnailUrl": "thumbnails/neon-division.svg",
+      "videoUrl": "https://vimeo.com/76979871",
+      "source": "vimeo",
+      "tags": ["gaming", "trailer", "cinematic"],
+      "featured": false,
+      "date": "2026-03-20"
+    },
+    {
+      "title": "New Season Launch",
+      "description": "Launch promo commissioned for a digital creator, from concept to final social cutdowns.",
+      "type": "commissioned",
+      "category": "altro",
+      "style": "promo edit",
+      "thumbnailUrl": "thumbnails/new-season.svg",
+      "videoUrl": "https://instagram.com/",
+      "source": "external",
+      "tags": ["client", "promo", "social"],
+      "featured": true,
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Ranked Highlights",
+      "description": "A compact commissioned highlight reel made for vertical and widescreen delivery.",
+      "type": "commissioned",
+      "category": "videogiochi",
+      "style": "simple edit",
+      "thumbnailUrl": "thumbnails/ranked-highlights.svg",
+      "videoUrl": "https://tiktok.com/",
+      "source": "external",
+      "tags": ["client", "gaming", "highlights"],
+      "featured": false,
+      "date": "2026-02-14"
+    }
+  ]
+}
