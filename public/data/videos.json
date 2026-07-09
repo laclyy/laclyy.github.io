@@ -8,7 +8,7 @@
     "difficulty: usa easy, medium, hard, very hard oppure masterpiece.",
     "Per un file locale, videoUrl deve essere per esempio videos/mio-edit.mp4.",
     "Per un MP4/WebM/MOV caricato su un cloud, inserisci l'URL diretto del file in videoUrl e usa source: direct oppure cloud.",
-    "aspectRatio è opzionale: puoi usarlo per forzare formati come 16/9, 9/16, 1/1 oppure 4/5.",
+    "aspectRatio è molto consigliato per i video del server: usa 16/9, 9/16, 1/1 oppure 4/5 per far aprire il popup già della dimensione corretta.",
     "Imposta featured su true per mostrare il video anche in home."
   ],
   "videos": [

@@ -31,6 +31,8 @@ npm run preview
 
 La cartella `dist` viene generata automaticamente e non deve essere modificata.
 
+Durante la build viene creato anche `dist/404.html`: serve a GitHub Pages per far funzionare gli URL puliti come `/videos` e `/contact` anche quando una persona ricarica la pagina.
+
 ## Pubblicare gratis su GitHub Pages
 
 1. Crea un nuovo repository su GitHub e carica questi file nel branch `main`.
@@ -69,7 +71,7 @@ Valori disponibili:
 - `category`: `anime`, `videogiochi` oppure `altro`.
 - `style`: `simple edit`, `vibe edit`, `typography`, `promo edit`, `flow edit`, `cinematic edit`, `amv`, `gmv` oppure `altro`.
 - `source`: `local`, `direct`, `cloud`, `youtube`, `vimeo`, `dailymotion` oppure `external`.
-- `aspectRatio`: opzionale. Serve soprattutto per embed o media particolari. Puoi usare `16/9`, `9/16`, `1/1`, `4/5`, ecc.
+- `aspectRatio`: molto consigliato per i video caricati sul server. Serve per aprire subito popup e card nella dimensione corretta, anche prima che il video parta. Puoi usare `16/9`, `9/16`, `1/1`, `4/5`, ecc.
 - `difficulty`: `easy`, `medium`, `hard`, `very hard` oppure `masterpiece`. Questo valore controlla il bordo colorato delle card video.
 - `date`: usa sempre il formato anno-mese-giorno, per esempio `2026-07-03`. L’archivio usa questa data per mostrare prima i lavori più recenti.
 - `tags`: parole utili per la ricerca interna, ognuna tra virgolette.
@@ -213,4 +215,4 @@ La Home mostra i social subito dopo la presentazione. I link con `mailto:` vengo
 - Le commissioni vengono indirizzate al sistema ticket del server Discord.
 - I player esterni vengono richiesti soltanto dopo un clic esplicito.
 - Le animazioni rispettano l’opzione di sistema “riduci movimento”.
-- Il routing usa `#`, una scelta affidabile per GitHub Pages e per il refresh diretto delle pagine.
+- Il routing usa URL puliti senza `#`. GitHub Pages usa il fallback `404.html` generato in build per servire correttamente le pagine interne.
