@@ -32,8 +32,8 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: #080706; font
   .section-heading p { @apply mt-4 max-w-xl text-sm leading-6 text-white/45 md:text-base md:leading-7; }
   .form-label { @apply mb-2.5 block font-mono text-[9px] uppercase tracking-[.15em] text-white/35; }
   .form-input { @apply w-full rounded-xl border border-white/[.09] bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/20 focus:border-flame/60 focus:ring-2 focus:ring-flame/10; }
-  .media-stage { @apply flex min-h-[260px] w-full items-center justify-center overflow-hidden bg-black p-0 sm:min-h-[340px]; }
-  .media-element { @apply block h-auto w-auto max-w-full object-contain; max-height: min(78vh, 820px); }
+  .media-stage { @apply flex w-full items-center justify-center overflow-hidden bg-black p-0; }
+  .media-element { @apply block h-full w-full object-cover; }
   .difficulty-frame-default { @apply bg-white/[.08]; }
   .difficulty-frame-easy { @apply bg-emerald-400/70 shadow-[0_0_34px_rgba(52,211,153,.14)]; }
   .difficulty-frame-medium { @apply bg-orange-400/75 shadow-[0_0_34px_rgba(251,146,60,.15)]; }
