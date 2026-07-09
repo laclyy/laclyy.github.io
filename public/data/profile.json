@@ -2,6 +2,7 @@
   "_help": "Modifica solo i testi dopo i due punti. Mantieni virgolette, virgole e parentesi esattamente come sono.",
   "name": "LACLY",
   "role": "Italian video editor",
+  "avatarUrl": "brand/lacly.png",
   "shortDescription": "I'm Lacly. I turn rhythm, imagery, and sound into edits that leave a mark.",
   "longDescription": "I create high-impact videos for creators, brands, and communities. Every edit starts with a clear idea: find the right rhythm, build tension, and give every frame a reason to be there.",
   "styleDescription": "My style blends precise sync, cinematic atmosphere, and dynamic typography. From the chaos of a gaming edit to the tension of an anime sequence, I always aim for a distinct visual identity.",
@@ -16,7 +17,7 @@
   "featuredText": "A selection of personal edits and commissioned projects, built frame by frame.",
   "strengthsTitle": "More than a clean cut.",
   "strengthsText": "Every project balances technique, instinct, and a slightly unreasonable number of replays.",
-  "contactTitle": "Have an idea? Let's give it rhythm.",
-  "contactText": "Tell me about the project, the mood, and the deadline. I'll get back to you with availability, timing, and a clear creative direction.",
-  "commissionCtaText": "Commission an edit"
+  "contactTitle": "Need an edit? Open a ticket.",
+  "contactText": "Commissions are managed through Lacly's Discord ticket system. Join the server, open a private ticket, and send the idea, references, deadline, format, and budget range.",
+  "commissionCtaText": "Open a commission ticket"
 }

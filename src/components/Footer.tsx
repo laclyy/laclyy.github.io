@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import ProfileAvatar from './ProfileAvatar'
 import type { Profile, Socials } from '../types'
 
 export default function Footer({ profile, socials }: { profile: Profile; socials: Socials }) {
@@ -8,9 +9,12 @@ export default function Footer({ profile, socials }: { profile: Profile; socials
     <footer className="border-t border-white/[.07] bg-black/20">
       <div className="shell py-10 md:py-14">
         <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
-          <div>
-            <Link to="/" className="font-display text-2xl font-bold tracking-[.15em] focus-ring">{profile.name}</Link>
-            <p className="mt-3 max-w-sm text-sm leading-6 text-white/45">{profile.shortDescription}</p>
+          <div className="flex items-start gap-4">
+            <ProfileAvatar profile={profile} size="sm" />
+            <div>
+              <Link to="/" className="font-display text-2xl font-bold tracking-[.15em] focus-ring">{profile.name}</Link>
+              <p className="mt-3 max-w-sm text-sm leading-6 text-white/45">{profile.shortDescription}</p>
+            </div>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {visible.map(([key, social]) => (

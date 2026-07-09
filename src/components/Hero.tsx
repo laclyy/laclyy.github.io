@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDownRight, ArrowRight, Play } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import ProfileAvatar from './ProfileAvatar'
 import type { Profile } from '../types'
 
 export default function Hero({ profile }: { profile: Profile }) {
@@ -20,6 +21,13 @@ export default function Hero({ profile }: { profile: Profile }) {
             {titleParts[0]}{titleParts[1] && <><br /><span className="text-gradient">{titleParts[1]}</span></>}
           </motion.h1>
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: .22 }} className="lg:pb-3">
+            <div className="mb-7 flex items-center gap-4 rounded-3xl border border-white/[.08] bg-white/[.035] p-3 pr-5 backdrop-blur-md">
+              <ProfileAvatar profile={profile} size="md" priority />
+              <div className="min-w-0">
+                <span className="block font-mono text-[9px] uppercase tracking-[.16em] text-white/35">Editor identity</span>
+                <span className="mt-1 block truncate font-display text-lg font-semibold">{profile.name}</span>
+              </div>
+            </div>
             <p className="text-base leading-7 text-white/58">{profile.heroText}</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/videos" className="button-primary"><Play size={15} fill="currentColor" />{profile.primaryCtaText}</Link>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
+import ProfileAvatar from './ProfileAvatar'
 import type { Profile } from '../types'
 
 const links = [
@@ -27,9 +28,7 @@ export default function Navbar({ profile }: { profile: Profile }) {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? 'border-b border-white/[.07] bg-ink/80 backdrop-blur-xl' : 'bg-transparent'}`}>
       <nav className="shell flex h-20 items-center justify-between" aria-label="Navigazione principale">
         <Link to="/" className="group flex items-center gap-3 rounded-sm focus-ring" aria-label={`${profile.name}, home`}>
-          <span className="relative grid h-8 w-8 place-items-center overflow-hidden rounded-full border border-white/15 bg-white/[.04]">
-            <span className="absolute h-4 w-4 rotate-45 bg-gradient-to-br from-ember via-flame to-solar transition-transform duration-500 group-hover:rotate-[225deg]" />
-          </span>
+          <ProfileAvatar profile={profile} size="xs" priority className="transition-transform duration-300 group-hover:scale-105" />
           <span className="font-display text-lg font-bold tracking-[.18em]">{profile.name}</span>
         </Link>
 

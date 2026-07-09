@@ -21,6 +21,7 @@ export interface VideoItem {
 export interface Profile {
   name: string
   role: string
+  avatarUrl?: string
   shortDescription: string
   longDescription: string
   styleDescription: string
