@@ -34,6 +34,33 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: #080706; font
   .form-input { @apply w-full rounded-xl border border-white/[.09] bg-black/20 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/20 focus:border-flame/60 focus:ring-2 focus:ring-flame/10; }
   .media-stage { @apply flex min-h-[260px] w-full items-center justify-center overflow-hidden bg-black p-0 sm:min-h-[340px]; }
   .media-element { @apply block h-auto w-auto max-w-full object-contain; max-height: min(78vh, 820px); }
+  .difficulty-frame-default { @apply bg-white/[.08]; }
+  .difficulty-frame-easy { @apply bg-emerald-400/70 shadow-[0_0_34px_rgba(52,211,153,.14)]; }
+  .difficulty-frame-medium { @apply bg-orange-400/75 shadow-[0_0_34px_rgba(251,146,60,.15)]; }
+  .difficulty-frame-hard { @apply bg-red-500/75 shadow-[0_0_38px_rgba(239,68,68,.18)]; }
+  .difficulty-frame-very-hard { @apply bg-purple-500/80 shadow-[0_0_40px_rgba(168,85,247,.20)]; }
+  .difficulty-pill-default { @apply border border-white/15 bg-black/45 text-white/65; }
+  .difficulty-pill-easy { @apply border border-emerald-300/30 bg-emerald-950/55 text-emerald-100; }
+  .difficulty-pill-medium { @apply border border-orange-300/30 bg-orange-950/55 text-orange-100; }
+  .difficulty-pill-hard { @apply border border-red-300/35 bg-red-950/60 text-red-100; }
+  .difficulty-pill-very-hard { @apply border border-purple-300/35 bg-purple-950/60 text-purple-100; }
+  .difficulty-pill-masterpiece { @apply border border-white/25 bg-black/55 text-white shadow-[0_0_24px_rgba(255,255,255,.12)]; }
+}
+
+.difficulty-frame-masterpiece {
+  background: conic-gradient(from var(--rainbow-angle), #ff2b2b, #ffb800, #fff45c, #21d17c, #27b8ff, #8b5cf6, #ff4fd8, #ff2b2b);
+  box-shadow: 0 0 42px rgba(255, 79, 216, .22), 0 0 34px rgba(255, 216, 59, .14);
+  animation: rainbow-border 3.5s linear infinite;
+}
+
+@property --rainbow-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rainbow-border {
+  to { --rainbow-angle: 360deg; }
 }
 
 .hero-orb {
@@ -70,4 +97,5 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: #080706; font
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .difficulty-frame-masterpiece { animation: none; }
 }

@@ -51,10 +51,11 @@ Apri `public/data/videos.json`. Dentro la sezione `videos`, copia un blocco esis
   "type": "my-edit",
   "category": "anime",
   "style": "vibe edit",
-  "thumbnailUrl": "https://esempio.com/thumbnail.jpg",
-  "videoUrl": "https://www.youtube.com/watch?v=ID_VIDEO",
-  "source": "youtube",
+  "thumbnailUrl": "https://tuo-cloud.com/thumbs/nome-video.jpg",
+  "videoUrl": "https://tuo-cloud.com/videos/nome-video.mp4",
+  "source": "cloud",
   "aspectRatio": "16/9",
+  "difficulty": "hard",
   "tags": ["anime", "dark", "sync"],
   "featured": true,
   "date": "2026-07-03"
@@ -68,6 +69,7 @@ Valori disponibili:
 - `style`: `simple edit`, `vibe edit`, `typography`, `promo edit`, `flow edit`, `cinematic edit`, `amv`, `gmv` oppure `altro`.
 - `source`: `local`, `direct`, `cloud`, `youtube`, `vimeo`, `dailymotion` oppure `external`.
 - `aspectRatio`: opzionale. Serve soprattutto per embed o media particolari. Puoi usare `16/9`, `9/16`, `1/1`, `4/5`, ecc.
+- `difficulty`: `easy`, `medium`, `hard`, `very hard` oppure `masterpiece`. Questo valore controlla il bordo colorato delle card video.
 - `date`: usa sempre il formato anno-mese-giorno, per esempio `2026-07-03`. L’archivio usa questa data per mostrare prima i lavori più recenti.
 - `tags`: parole utili per la ricerca interna, ognuna tra virgolette.
 
@@ -77,7 +79,15 @@ Per mostrare un video nella Home imposta `"featured": true`. Usa `false` per las
 
 ## Video esterni
 
-È la modalità consigliata. Copia in `videoUrl` il link completo del video e imposta `source`:
+È la modalità consigliata per questo portfolio. Carica gli MP4/WebM/MOV leggeri sul tuo server/cloud, copia in `videoUrl` il link diretto del file e imposta:
+
+```json
+"source": "cloud"
+```
+
+Il video verrà riprodotto direttamente dentro la modale del sito, senza mandare il visitatore su un link esterno. Il player viene caricato solo quando una persona apre il video.
+
+Il sito supporta ancora altre sorgenti, se servissero in futuro:
 
 - File video diretto su cloud: `direct` oppure `cloud`
 - YouTube: `youtube`
@@ -100,6 +110,7 @@ Esempio con MP4 caricato sul tuo cloud:
   "videoUrl": "https://tuo-cloud.com/videos/vertical-edit.mp4",
   "source": "cloud",
   "aspectRatio": "9/16",
+  "difficulty": "very hard",
   "tags": ["vertical", "sync", "short"],
   "featured": false,
   "date": "2026-07-08"

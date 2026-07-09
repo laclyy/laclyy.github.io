@@ -2,11 +2,13 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ExternalLink, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { publicUrl } from '../lib/content'
-import { detectSource, embedUrl, isDirectMediaSource, isImageMediaUrl } from '../lib/videos'
+import { embedUrl, isDirectMediaSource, isImageMediaUrl } from '../lib/videos'
+import { formatMonthYear, getDifficultyMeta, normalizeAspectRatio } from '../lib/videoMeta'
 import type { VideoItem } from '../types'
 
 export default function VideoModal({ video, onClose }: { video: VideoItem | null; onClose: () => void }) {
   const closeRef = useRef<HTMLButtonElement>(null)
+  const difficulty = getDifficultyMeta(video?.difficulty)
   useEffect(() => {
     if (!video) return
     const previousOverflow = document.body.style.overflow
@@ -24,9 +26,19 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
           <motion.div initial={{ opacity: 0, y: 25, scale: .98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 15, scale: .98 }} transition={{ type: 'spring', damping: 27, stiffness: 280 }} className="relative my-auto w-full max-w-6xl overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#0d0b0a] shadow-[0_30px_100px_rgba(0,0,0,.7)]">
             <button ref={closeRef} onClick={onClose} className="absolute right-3 top-3 z-20 grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-black/60 text-white backdrop-blur-md transition hover:bg-white hover:text-black focus-ring" aria-label="Close video"><X size={18} /></button>
             <Player video={video} />
-            <div className="grid gap-5 p-5 md:grid-cols-[1fr_auto] md:items-end md:p-7">
-              <div><div className="eyebrow mb-3"><span className="h-1 w-1 rounded-full bg-flame" />{video.type === 'my-edit' ? 'Personal work' : 'Commissioned work'} · {video.style}</div><h2 className="font-display text-2xl font-semibold md:text-3xl">{video.title}</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-white/48">{video.description}</p><div className="mt-4 flex flex-wrap gap-2">{video.tags.map((tag) => <span key={tag} className="font-mono text-[9px] uppercase tracking-[.12em] text-white/28">#{tag}</span>)}</div></div>
-              <a href={publicUrl(video.videoUrl)} target="_blank" rel="noreferrer" className="button-secondary whitespace-nowrap">Open source <ExternalLink size={15} /></a>
+            <div className="p-5 md:p-7">
+              <div>
+                <div className="eyebrow mb-3"><span className="h-1 w-1 rounded-full bg-flame" />{video.type === 'my-edit' ? 'Personal work' : 'Commissioned work'} · {video.style} · {formatMonthYear(video.date)}</div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h2 className="font-display text-2xl font-semibold md:text-3xl">{video.title}</h2>
+                  <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md ${difficulty.pillClass}`}>
+                    <span className={`h-1.5 w-1.5 rounded-full ${difficulty.dotClass}`} />
+                    {difficulty.label}
+                  </span>
+                </div>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-white/48">{video.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">{video.tags.map((tag) => <span key={tag} className="font-mono text-[9px] uppercase tracking-[.12em] text-white/28">#{tag}</span>)}</div>
+              </div>
             </div>
           </motion.div>
         </motion.div>
@@ -36,7 +48,6 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
 }
 
 function Player({ video }: { video: VideoItem }) {
-  const source = detectSource(video.videoUrl, video.source)
   const embed = embedUrl(video)
   if (isDirectMediaSource(video)) return <DirectMediaPlayer video={video} />
   if (embed) return <EmbedPlayer video={video} embed={embed} />
@@ -44,10 +55,15 @@ function Player({ video }: { video: VideoItem }) {
 }
 
 function DirectMediaPlayer({ video }: { video: VideoItem }) {
-  const [ratio, setRatio] = useState(normalizeRatio(video.aspectRatio))
+  const [ratio, setRatio] = useState(normalizeAspectRatio(video.aspectRatio))
   const [failed, setFailed] = useState(false)
   const mediaUrl = publicUrl(video.videoUrl)
   const poster = publicUrl(video.thumbnailUrl || 'thumbnails/fallback.svg')
+
+  useEffect(() => {
+    setRatio(normalizeAspectRatio(video.aspectRatio))
+    setFailed(false)
+  }, [video.aspectRatio, video.videoUrl])
 
   if (isImageMediaUrl(video.videoUrl)) {
     return (
@@ -92,7 +108,7 @@ function DirectMediaPlayer({ video }: { video: VideoItem }) {
 }
 
 function EmbedPlayer({ video, embed }: { video: VideoItem; embed: string }) {
-  const ratio = normalizeRatio(video.aspectRatio)
+  const ratio = normalizeAspectRatio(video.aspectRatio)
   return (
     <div className="media-stage">
       <div className="w-full max-w-full" style={{ aspectRatio: ratio || '16 / 9', maxHeight: 'min(78vh, 820px)' }}>
@@ -100,10 +116,4 @@ function EmbedPlayer({ video, embed }: { video: VideoItem; embed: string }) {
       </div>
     </div>
   )
-}
-
-function normalizeRatio(value?: string): string | undefined {
-  if (!value) return undefined
-  const normalized = value.trim().replace(':', ' / ')
-  return /^\d+(\.\d+)?\s*\/\s*\d+(\.\d+)?$/.test(normalized) ? normalized : undefined
 }
