@@ -59,13 +59,13 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
       </div>
 
       <div className="mt-5 space-y-5 border-t border-white/[.07] pt-5">
-        <FilterStrip title="Category" helper="Choose Anime or Games" values={categories} active={filters.category} onClick={setCategory} />
+        <FilterStrip title="Category" values={categories} active={filters.category} onClick={setCategory} />
 
         {filters.category === 'videogiochi' && (
-          <FilterStrip title="Game" helper="Narrow down game edits" values={games} active={filters.game} onClick={setGame} />
+          <FilterStrip title="Game" values={games} active={filters.game} onClick={setGame} />
         )}
 
-        <FilterStrip title="Style" helper="Styles update based on the filters above" values={availableStyles.map((value) => ({ value, label: label(value) }))} active={filters.style} onClick={(style) => patch({ style })} wide />
+        <FilterStrip title="Style" values={availableStyles.map((value) => ({ value, label: label(value) }))} active={filters.style} onClick={(style) => patch({ style })} wide />
       </div>
 
       <div className="mt-5 flex items-center justify-between border-t border-white/[.07] pt-4 font-mono text-[9px] uppercase tracking-[.16em] text-white/28">
@@ -76,13 +76,12 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
   )
 }
 
-function FilterStrip({ title, helper, values, active, onClick, wide = false }: { title: string; helper: string; values: Array<{ value: string; label: string }>; active: string; onClick: (value: string) => void; wide?: boolean }) {
+function FilterStrip({ title, values, active, onClick, wide = false }: { title: string; values: Array<{ value: string; label: string }>; active: string; onClick: (value: string) => void; wide?: boolean }) {
   return (
     <fieldset className={`grid gap-3 ${wide ? 'lg:grid-cols-[180px_1fr]' : 'sm:grid-cols-[180px_1fr]'} sm:items-start`}>
       <legend className="contents">
         <span className="min-w-0">
-          <span className="block font-mono text-[9px] uppercase tracking-[.17em] text-white/32">{title}</span>
-          <span className="mt-1 block text-xs text-white/28">{helper}</span>
+          <span className="block pt-1.5 font-mono text-[9px] uppercase tracking-[.17em] text-white/32">{title}</span>
         </span>
       </legend>
       <div className="flex flex-wrap gap-1.5">
