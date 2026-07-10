@@ -1,121 +1,1835 @@
 {
   "_instructions": [
     "Aggiungi un video copiando un elemento dentro videos e cambiando i valori.",
-    "type: usa my-edit oppure commissioned.",
-    "category: usa anime, videogiochi oppure altro.",
-    "source: usa local, direct, cloud, youtube, vimeo, dailymotion oppure external.",
-    "Per i video del vostro server usa source: cloud e inserisci l'URL diretto del file video in videoUrl.",
-    "difficulty: usa easy, medium, hard, very hard oppure masterpiece.",
-    "Per un file locale, videoUrl deve essere per esempio videos/mio-edit.mp4.",
-    "Per un MP4/WebM/MOV caricato su un cloud, inserisci l'URL diretto del file in videoUrl e usa source: direct oppure cloud.",
-    "aspectRatio è molto consigliato per i video del server: usa 16/9, 9/16, 1/1 oppure 4/5 per far aprire il popup già della dimensione corretta.",
+    "type: usa my-edit oppure commissioned. In questo file è stato assegnato in base alla cartella.",
+    "category: usa anime, videogiochi oppure altro. In questo file è stata assegnata in base alla cartella principale.",
+    "style: usa amv, gmv, vibe edit oppure promo edit in base alla cartella del video.",
+    "source: per i video del server usa cloud.",
+    "difficulty: usa easy, medium, hard, very hard oppure masterpiece. La difficoltà resta anche nel titolo tra parentesi.",
+    "tags: usa solo tag utili derivati dalle cartelle, per esempio anime, gaming, rocket league, tiktok, trend, vibe, commission.",
+    "thumbnailUrl: le thumbnail sono PNG nella cartella thumbnails e hanno lo stesso nome del video.",
+    "aspectRatio: se conosci il formato reale puoi usare 16/9, 9/16, 1/1 oppure 4/5. Il player legge comunque i metadata del video quando apre la modale.",
     "Imposta featured su true per mostrare il video anche in home."
   ],
   "videos": [
     {
-      "title": "Crimson Pulse",
-      "description": "Dark anime vibe edit with sharp sync, controlled impact and cinematic pacing.",
-      "type": "my-edit",
+      "title": "house trend x nauz(medium)",
+      "description": "house trend x nauz by Lacly.",
+      "type": "commissioned",
       "category": "anime",
-      "style": "vibe edit",
-      "thumbnailUrl": "thumbnails/wishi.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/wishi.mp4",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/house%20trend%20x%20nauz%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/house%20trend%20x%20nauz%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "maki promo edit(medium)",
+      "description": "maki promo edit by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/maki%20promo%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/maki%20promo%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nazuna edit(easy)",
+      "description": "nazuna edit by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/nazuna%20edit%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/nazuna%20edit%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nazuna promo edit(hard)",
+      "description": "nazuna promo edit by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/nazuna%20promo%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/nazuna%20promo%20edit%28hard%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
-      "tags": ["anime", "dark", "sync", "cinematic"],
-      "featured": true,
-      "date": "2026-07-03"
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
     },
     {
-      "title": "godo sossio",
-      "description": "si sossio godo",
+      "title": "nazuna sponsor(easy)",
+      "description": "nazuna sponsor by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/nazuna%20sponsor%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/nazuna%20sponsor%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nobara promo edit(medium)",
+      "description": "nobara promo edit by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/nobara%20promo%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/nobara%20promo%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "oshi no ko concert(easy)",
+      "description": "oshi no ko concert by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/oshi%20no%20ko%20concert%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/oshi%20no%20ko%20concert%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "shikimori edit2(easy)",
+      "description": "shikimori edit2 by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/shikimori%20edit2%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/shikimori%20edit2%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "shinoa edit 2(easy)",
+      "description": "shinoa edit 2 by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/shinoa%20edit%202%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/shinoa%20edit%202%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "sukuna promo edit(medium)",
+      "description": "sukuna promo edit by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "promo edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/sukuna%20promo%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/sukuna%20promo%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "promotion",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "bachira sigma boy(easy)",
+      "description": "bachira sigma boy by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/sigma%20boys/bachira%20sigma%20boy%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/sigma%20boys/bachira%20sigma%20boy%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "sigma boys"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "isagi sigma boy(easy)",
+      "description": "isagi sigma boy by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/sigma%20boys/isagi%20sigma%20boy%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/sigma%20boys/isagi%20sigma%20boy%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "sigma boys"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nagi sigma boy(easy)",
+      "description": "nagi sigma boy by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/sigma%20boys/nagi%20sigma%20boy%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/sigma%20boys/nagi%20sigma%20boy%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "sigma boys"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "shidou sigma boy(easy)",
+      "description": "shidou sigma boy by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/sigma%20boys/shidou%20sigma%20boy%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/sigma%20boys/shidou%20sigma%20boy%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "sigma boys"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "2b edit(hard)",
+      "description": "2b edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/2b%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/2b%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "anya x gojo edit(masterpiece)",
+      "description": "anya x gojo edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/anya%20x%20gojo%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/anya%20x%20gojo%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "atri edit(easy)",
+      "description": "atri edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/atri%20edit%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/atri%20edit%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "boh(medium)",
+      "description": "boh by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/boh%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/boh%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "chinatsu(easy)",
+      "description": "chinatsu by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/chinatsu%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/chinatsu%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "cosmic princess kaguya trailer edit(medium)",
+      "description": "cosmic princess kaguya trailer edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/cosmic%20princess%20kaguya%20trailer%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/cosmic%20princess%20kaguya%20trailer%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "GET OUT(easy)",
+      "description": "GET OUT by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/GET%20OUT%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/GET%20OUT%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "gojo_manga_animations_edit(hard)",
+      "description": "gojo_manga_animations_edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/gojo_manga_animations_edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/gojo_manga_animations_edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "h.miku(easy)",
+      "description": "h.miku by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/h.miku%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/h.miku%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "kitagawa edit(medium)",
+      "description": "kitagawa edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/kitagawa%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/kitagawa%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "kkk(easy)",
+      "description": "kkk by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/kkk%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/kkk%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Kurumi Edit New Style(hard)",
+      "description": "Kurumi Edit New Style by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/Kurumi%20Edit%20New%20Style%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/Kurumi%20Edit%20New%20Style%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "kurumi yandere animation(masterpiece)",
+      "description": "kurumi yandere animation by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/kurumi%20yandere%20animation%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/kurumi%20yandere%20animation%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "loid peak(medium)",
+      "description": "loid peak by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/loid%20peak%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/loid%20peak%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "lylisa(easy)",
+      "description": "lylisa by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/lylisa%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/lylisa%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "masha(easy)",
+      "description": "masha by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/masha%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/masha%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "meme_finale(easy)",
+      "description": "meme_finale by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/meme_finale%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/meme_finale%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "my dress up darling trailer s2 edit(easy)",
+      "description": "my dress up darling trailer s2 edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/my%20dress%20up%20darling%20trailer%20s2%20edit%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/my%20dress%20up%20darling%20trailer%20s2%20edit%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nightmare x white queen(masterpiece)",
+      "description": "nightmare x white queen by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/nightmare%20x%20white%20queen%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/nightmare%20x%20white%20queen%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "old kurumi(easy)",
+      "description": "old kurumi by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/old%20kurumi%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/old%20kurumi%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rikka(easy)",
+      "description": "rikka by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/rikka%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/rikka%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "ryio edit(very hard)",
+      "description": "ryio edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/ryio%20edit%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/ryio%20edit%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "very hard",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "sao(easy)",
+      "description": "sao by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/sao%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/sao%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "shikimori edit(medium)",
+      "description": "shikimori edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/shikimori%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/shikimori%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "shikimori jugg edit(medium)",
+      "description": "shikimori jugg edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/shikimori%20jugg%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/shikimori%20jugg%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "shikimori(easy)",
+      "description": "shikimori by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/shikimori%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/shikimori%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "toga(easy)",
+      "description": "toga by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/toga%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/toga%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "tqq edit(medium)",
+      "description": "tqq edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/tqq%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/tqq%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "waguri edit(easy)",
+      "description": "waguri edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/waguri%20edit%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/waguri%20edit%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "yuno gasai edit(easy)",
+      "description": "yuno gasai edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/yuno%20gasai%20edit%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/yuno%20gasai%20edit%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "tiktok"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "aizen edit(easy)",
+      "description": "aizen edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/aizen%20edit%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/aizen%20edit%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "animemix(easy)",
+      "description": "animemix by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/animemix%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/animemix%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Bigger Better Stronger! waguri trend edit(very hard)",
+      "description": "Bigger Better Stronger! waguri trend edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/Bigger%20Better%20Stronger%21%20waguri%20trend%20edit%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/Bigger%20Better%20Stronger%21%20waguri%20trend%20edit%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "very hard",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "drake trend(easy)",
+      "description": "drake trend by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/drake%20trend%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/drake%20trend%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "eyesmix(easy)",
+      "description": "eyesmix by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/eyesmix%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/eyesmix%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "her(medium)",
+      "description": "her by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/her%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/her%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "house trend x nauz(medium)",
+      "description": "house trend x nauz by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/house%20trend%20x%20nauz%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/house%20trend%20x%20nauz%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "sybau(easy)",
+      "description": "sybau by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/sybau%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/sybau%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "yo(medium)",
+      "description": "yo by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "amv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/trend%20edits/yo%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/trend%20edits/yo%28medium%29.mov",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "medium",
+      "tags": [
+        "anime",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "amagami sisters edit(hard)",
+      "description": "amagami sisters edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/amagami%20sisters%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/amagami%20sisters%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "i want to eat your pancreas vibe edit(hard)",
+      "description": "i want to eat your pancreas vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/i%20want%20to%20eat%20your%20pancreas%20vibe%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/i%20want%20to%20eat%20your%20pancreas%20vibe%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "kurumi vibe edit(masterpiece)",
+      "description": "kurumi vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/kurumi%20vibe%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/kurumi%20vibe%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "lacly mii edit(masterpiece)",
+      "description": "lacly mii edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/lacly%20mii%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/lacly%20mii%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "makima x reze manga animations edit(very hard)",
+      "description": "makima x reze manga animations edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/makima%20x%20reze%20manga%20animations%20edit%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/makima%20x%20reze%20manga%20animations%20edit%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "very hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "reze & denji vibe edit(hard)",
+      "description": "reze & denji vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/reze%20%26%20denji%20vibe%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/reze%20%26%20denji%20vibe%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "reze aestetic vibe edit(very hard)",
+      "description": "reze aestetic vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/reze%20aestetic%20vibe%20edit%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/reze%20aestetic%20vibe%20edit%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "very hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "reze film edit (18k) typo style(masterpiece)",
+      "description": "reze film edit (18k) typo style by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/reze%20film%20edit%20%2818k%29%20typo%20style%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/reze%20film%20edit%20%2818k%29%20typo%20style%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "reze film edit dub ita(very hard)",
+      "description": "reze film edit dub ita by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/reze%20film%20edit%20dub%20ita%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/reze%20film%20edit%20dub%20ita%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "very hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "Takt Op. Destiny vibe edit(masterpiece)",
+      "description": "Takt Op. Destiny vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/Takt%20Op.%20Destiny%20vibe%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/Takt%20Op.%20Destiny%20vibe%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "the eminence in shadow x morto mai (piano solo) vibe edit(masterpiece)",
+      "description": "the eminence in shadow x morto mai (piano solo) vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/the%20eminence%20in%20shadow%20x%20morto%20mai%20%28piano%20solo%29%20vibe%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/the%20eminence%20in%20shadow%20x%20morto%20mai%20%28piano%20solo%29%20vibe%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "tokyo ghoul vibe edit(masterpiece)",
+      "description": "tokyo ghoul vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/tokyo%20ghoul%20vibe%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/tokyo%20ghoul%20vibe%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "violet evergarden vibestyle edit(masterpiece)",
+      "description": "violet evergarden vibestyle edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/violet%20evergarden%20vibestyle%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/violet%20evergarden%20vibestyle%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "masterpiece",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "wistoria(hard)",
+      "description": "wistoria by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/wistoria%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/wistoria%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "yami vibe edit(hard)",
+      "description": "yami vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/yami%20vibe%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/yami%20vibe%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "hard",
+      "tags": [
+        "anime",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "ananta 1(easy)",
+      "description": "ananta 1 by Lacly.",
       "type": "my-edit",
       "category": "videogiochi",
       "style": "gmv",
-      "thumbnailUrl": "thumbnails/manu.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/manu.mp4",
-      "source": "cloud",
-      "aspectRatio": "1/1",
-      "difficulty": "medium",
-      "tags": [ "gaming", "gmv", "action", "sync" ],
-      "featured": true,
-      "date": "2026-06-18"
-    },
-    {
-      "title": "sossio w modder",
-      "description": "aura sossio",
-      "type": "my-edit",
-      "category": "altro",
-      "style": "typography",
-      "thumbnailUrl": "thumbnails/kinetic-type.svg",
-      "videoUrl": "https://cripsum.com/vid/sossiogacha.mp4",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/other%20games%20edits/ananta%201%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/other%20games%20edits/ananta%201%28easy%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "masterpiece",
-      "tags": [ "typography", "motion", "experimental" ],
-      "featured": true,
-      "date": "2026-05-26"
-    },
-    {
-      "title": "Afterglow",
-      "description": "A warm, atmospheric flow edit focused on visual continuity and soft musical accents.",
-      "type": "my-edit",
-      "category": "anime",
-      "style": "flow edit",
-      "thumbnailUrl": "thumbnails/jackpot.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/jackpot.mp4",
-      "source": "cloud",
-      "aspectRatio": "4/5",
       "difficulty": "easy",
-      "tags": ["anime", "flow", "atmospheric"],
+      "tags": [
+        "gaming",
+        "other games"
+      ],
       "featured": false,
-      "date": "2026-04-11"
+      "date": "2026-07-10"
     },
     {
-      "title": "Neon Division",
-      "description": "Cinematic game trailer concept with dramatic build-up and a dense, textured finish.",
+      "title": "ananta 2(easy)",
+      "description": "ananta 2 by Lacly.",
       "type": "my-edit",
       "category": "videogiochi",
-      "style": "cinematic edit",
-      "thumbnailUrl": "thumbnails/neon-division.svg",
-      "videoUrl": "https://cripsum.com/vid/sossiogacha.mp4",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/other%20games%20edits/ananta%202%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/other%20games%20edits/ananta%202%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "easy",
+      "tags": [
+        "gaming",
+        "other games"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "ananta 3(easy)",
+      "description": "ananta 3 by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/other%20games%20edits/ananta%203%28easy%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/other%20games%20edits/ananta%203%28easy%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "easy",
+      "tags": [
+        "gaming",
+        "other games"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "arknights comp animations edit(very hard)",
+      "description": "arknights comp animations edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/other%20games%20edits/arknights%20comp%20animations%20edit%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/other%20games%20edits/arknights%20comp%20animations%20edit%28very%20hard%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
-      "tags": ["gaming", "trailer", "cinematic"],
+      "tags": [
+        "gaming",
+        "other games"
+      ],
       "featured": false,
-      "date": "2026-03-20"
+      "date": "2026-07-10"
     },
     {
-      "title": "New Season Launch",
-      "description": "Launch promo commissioned for a digital creator, from concept to final social cutdowns.",
+      "title": "lacly edit x nixus 1(hard)",
+      "description": "lacly edit x nixus 1 by Lacly.",
       "type": "commissioned",
-      "category": "altro",
-      "style": "promo edit",
-      "thumbnailUrl": "thumbnails/new-season.svg",
-      "videoUrl": "https://sitodaking.it:8443/FOOTAGE/vkw_tut_installation_launcher.mp4",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/commission%20edits/lacly%20edit%20x%20nixus%201%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/commission%20edits/lacly%20edit%20x%20nixus%201%28hard%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
-      "tags": ["client", "promo", "social"],
-      "featured": true,
-      "date": "2026-06-01"
+      "tags": [
+        "gaming",
+        "rocket league",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
     },
     {
-      "title": "Ranked Highlights",
-      "description": "A compact commissioned highlight reel made for vertical and widescreen delivery.",
+      "title": "nixus edit 3 by lacly(hard)",
+      "description": "nixus edit 3 by lacly by Lacly.",
       "type": "commissioned",
       "category": "videogiochi",
-      "style": "simple edit",
-      "thumbnailUrl": "thumbnails/ranked-highlights.svg",
-      "videoUrl": "https://cripsum.com/vid/sossiogacha.mp4",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20edit%203%20by%20lacly%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20edit%203%20by%20lacly%28hard%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "easy",
-      "tags": ["client", "gaming", "highlights"],
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "commission"
+      ],
       "featured": false,
-      "date": "2026-02-14"
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nixus edit 5(medium)",
+      "description": "nixus edit 5 by Lacly.",
+      "type": "commissioned",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20edit%205%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20edit%205%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "medium",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nixus rize rl edit by lacly(hard)",
+      "description": "nixus rize rl edit by lacly by Lacly.",
+      "type": "commissioned",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20rize%20rl%20edit%20by%20lacly%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20rize%20rl%20edit%20by%20lacly%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "nixus shiiya rl edit x kurumi by lacly(masterpiece)",
+      "description": "nixus shiiya rl edit x kurumi by lacly by Lacly.",
+      "type": "commissioned",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20shiiya%20rl%20edit%20x%20kurumi%20by%20lacly%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20shiiya%20rl%20edit%20x%20kurumi%20by%20lacly%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "masterpiece",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "commission"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl nixus edit 4(very hard)",
+      "description": "rl nixus edit 4 by Lacly.",
+      "type": "commissioned",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/commission%20edits/rl%20nixus%20edit%204%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/commission%20edits/rl%20nixus%20edit%204%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "commission"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "goku rl edit(hard)",
+      "description": "goku rl edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/goku%20rl%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/goku%20rl%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "kaneki rl edit(very hard)",
+      "description": "kaneki rl edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/kaneki%20rl%20edit%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/kaneki%20rl%20edit%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit x death note(masterpiece)",
+      "description": "rl edit x death note by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20death%20note%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20death%20note%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "masterpiece",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit x isagi(very hard)",
+      "description": "rl edit x isagi by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20isagi%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20isagi%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit x rezee(masterpiece)",
+      "description": "rl edit x rezee by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20rezee%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20rezee%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "masterpiece",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit x shadow(very hard)",
+      "description": "rl edit x shadow by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20shadow%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20shadow%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit x tanjiro(very hard)",
+      "description": "rl edit x tanjiro by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20tanjiro%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20tanjiro%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit x violet evergarden(hard)",
+      "description": "rl edit x violet evergarden by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20violet%20evergarden%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20violet%20evergarden%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl x tha sup edit(hard)",
+      "description": "rl x tha sup edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20x%20tha%20sup%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20x%20tha%20sup%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "waguri and rintaro rl edit(masterpiece)",
+      "description": "waguri and rintaro rl edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/waguri%20and%20rintaro%20rl%20edit%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/waguri%20and%20rintaro%20rl%20edit%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "masterpiece",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "microwave rl edit(hard)",
+      "description": "microwave rl edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/trend%20edits/microwave%20rl%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/trend%20edits/microwave%20rl%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "mimimi rl edit(medium)",
+      "description": "mimimi rl edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/trend%20edits/mimimi%20rl%20edit%28medium%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/trend%20edits/mimimi%20rl%20edit%28medium%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "medium",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit i want things to be beautiful(very hard)",
+      "description": "rl edit i want things to be beautiful by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/trend%20edits/rl%20edit%20i%20want%20things%20to%20be%20beautiful%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/trend%20edits/rl%20edit%20i%20want%20things%20to%20be%20beautiful%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl edit(hard)",
+      "description": "rl edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/trend%20edits/rl%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/trend%20edits/rl%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "sukuna x rl edit(hard)",
+      "description": "sukuna x rl edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/trend%20edits/sukuna%20x%20rl%20edit%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/trend%20edits/sukuna%20x%20rl%20edit%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "velocity edit rl(hard)",
+      "description": "velocity edit rl by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "gmv",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/trend%20edits/velocity%20edit%20rl%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/trend%20edits/velocity%20edit%20rl%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "trend"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl vibe edit 2(very hard)",
+      "description": "rl vibe edit 2 by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%202%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%202%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl vibe edit landslide(masterpiece)",
+      "description": "rl vibe edit landslide by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%20landslide%28masterpiece%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%20landslide%28masterpiece%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "masterpiece",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "vibe"
+      ],
+      "featured": true,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl vibe edit urban central(very hard)",
+      "description": "rl vibe edit urban central by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%20urban%20central%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%20urban%20central%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl vibe edit(very hard)",
+      "description": "rl vibe edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%28very%20hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%28very%20hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+    {
+      "title": "rl x lv animation(hard)",
+      "description": "rl x lv animation by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20x%20lv%20animation%28hard%29.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20x%20lv%20animation%28hard%29.mp4",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "tags": [
+        "gaming",
+        "rocket league",
+        "vibe"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
     }
   ]
 }
