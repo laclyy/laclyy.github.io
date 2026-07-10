@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Clapperboard } from 'lucide-react'
 import type { VideoItem } from '../types'
 import VideoCard from './VideoCard'
@@ -10,5 +10,5 @@ export default function VideoGrid({ videos, loading, onOpen }: { videos: VideoIt
       <div><span className="mx-auto grid h-14 w-14 place-items-center rounded-full border border-white/10 bg-white/[.03] text-flame"><Clapperboard size={22} /></span><h3 className="mt-5 font-display text-2xl">No frames here. Yet.</h3><p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-white/45">Try changing or resetting the filters. The next edit might be just around the corner.</p></div>
     </motion.div>
   )
-  return <motion.div layout className="grid gap-x-6 gap-y-12 md:grid-cols-2 xl:grid-cols-3"><AnimatePresence mode="popLayout">{videos.map((video, index) => <VideoCard key={`${video.title}-${video.date}`} video={video} onOpen={onOpen} index={index} />)}</AnimatePresence></motion.div>
+  return <motion.div key={videos.map((video) => video.videoUrl).join('|')} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .22 }} className="grid gap-x-6 gap-y-12 md:grid-cols-2 xl:grid-cols-3">{videos.map((video, index) => <VideoCard key={video.videoUrl} video={video} onOpen={onOpen} index={index} />)}</motion.div>
 }

@@ -5,12 +5,12 @@ import { publicUrl } from '../lib/content'
 import { formatMonthYear, getDifficultyMeta, normalizeAspectRatio } from '../lib/videoMeta'
 import type { VideoItem } from '../types'
 
-export default function VideoCard({ video, onOpen, index = 0 }: { video: VideoItem; onOpen: (video: VideoItem) => void; index?: number }) {
+export default function VideoCard({ video, onOpen }: { video: VideoItem; onOpen: (video: VideoItem) => void; index?: number }) {
   const [src, setSrc] = useState(publicUrl(video.thumbnailUrl || 'thumbnails/fallback.svg'))
   const difficulty = getDifficultyMeta(video.difficulty)
   const aspectRatio = normalizeAspectRatio(video.aspectRatio)
   return (
-    <motion.article layout initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: .97 }} transition={{ duration: .4, delay: Math.min(index * .045, .2) }} className="group min-w-0">
+    <motion.article initial={false} className="group min-w-0">
       <button onClick={() => onOpen(video)} className="block w-full text-left focus-ring" aria-label={`Play ${video.title}`}>
         <div className={`relative rounded-[1.35rem] p-[1px] ${difficulty.frameClass}`}>
           <div className="relative aspect-video overflow-hidden rounded-[1.28rem] bg-panel shadow-2xl shadow-black/25" style={aspectRatio ? { aspectRatio } : undefined}>
