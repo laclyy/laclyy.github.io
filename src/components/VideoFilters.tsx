@@ -2,7 +2,7 @@ import { RotateCcw, Search } from 'lucide-react'
 import type { Filters } from '../types'
 
 const categories = ['all', 'anime', 'videogiochi', 'altro']
-const styles = ['all', 'simple edit', 'vibe edit', 'typography', 'promo edit', 'flow edit', 'cinematic edit', 'amv', 'gmv', 'altro']
+const styles = ['all', 'promo edit', 'commission edit', 'sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'other games edit', 'lacly style edit']
 
 const labels: Record<string, string> = { all: 'All', videogiochi: 'Gaming', altro: 'Other' }
 const label = (value: string) => labels[value] ?? value.charAt(0).toUpperCase() + value.slice(1)
