@@ -7,7 +7,7 @@
     "style: prendilo dalla cartella specifica del video, per esempio tiktok edit, trend edit, vibe edit, sigma boy, commission edit, lacly style edit.",
     "source: per i video del server usa cloud.",
     "difficulty: usa easy, medium, hard, very hard oppure masterpiece.",
-    "tags: usa solo tag utili derivati dalle cartelle, per esempio anime, gaming, rocket league, tiktok, trend, vibe, commission.",
+    "tags: usa solo tag brevi e utili derivati dalle cartelle, per esempio anime, gaming, rocket league, other games, promo, tiktok, trend, vibe, commission, lacly style.",
     "thumbnailUrl: le thumbnail sono PNG nella cartella thumbnails e hanno lo stesso nome del video.",
     "aspectRatio: se conosci il formato reale puoi usare 16/9, 9/16, 1/1 oppure 4/5. Il player legge comunque i metadata del video quando apre la modale.",
     "Imposta featured su true per mostrare il video anche in home."
@@ -26,7 +26,7 @@
       "difficulty": "medium",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -45,7 +45,7 @@
       "difficulty": "medium",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -64,7 +64,7 @@
       "difficulty": "easy",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -83,7 +83,7 @@
       "difficulty": "hard",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -102,7 +102,7 @@
       "difficulty": "easy",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -121,7 +121,7 @@
       "difficulty": "medium",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -140,7 +140,7 @@
       "difficulty": "easy",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -159,7 +159,7 @@
       "difficulty": "easy",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -178,7 +178,7 @@
       "difficulty": "easy",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,
@@ -197,7 +197,7 @@
       "difficulty": "medium",
       "tags": [
         "anime",
-        "promotion",
+        "promo",
         "commission"
       ],
       "featured": false,

@@ -24,8 +24,9 @@ export function useFilteredVideos(videos: VideoItem[], filters: Filters) {
     return videos
       .filter((video) => filters.type === 'all' || video.type === filters.type)
       .filter((video) => filters.category === 'all' || video.category === filters.category)
+      .filter((video) => filters.game === 'all' || video.tags.includes(filters.game))
       .filter((video) => filters.style === 'all' || video.style === filters.style)
-      .filter((video) => !query || `${video.title} ${video.description} ${video.tags.join(' ')}`.toLocaleLowerCase('en').includes(query))
+      .filter((video) => !query || `${video.title} ${video.description} ${video.style} ${video.tags.join(' ')}`.toLocaleLowerCase('en').includes(query))
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   }, [filters, videos])
 }

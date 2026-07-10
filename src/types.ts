@@ -53,6 +53,7 @@ export type Socials = Record<string, SocialItem>
 export interface Filters {
   type: 'all' | VideoType
   category: string
+  game: string
   style: string
   search: string
 }
