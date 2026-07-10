@@ -78,7 +78,7 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
 
 function FilterStrip({ title, values, active, onClick, wide = false }: { title: string; values: Array<{ value: string; label: string }>; active: string; onClick: (value: string) => void; wide?: boolean }) {
   return (
-    <fieldset className={`grid gap-3 ${wide ? 'lg:grid-cols-[180px_1fr]' : 'sm:grid-cols-[180px_1fr]'} sm:items-start`}>
+    <fieldset className={`grid gap-3 ${wide ? 'lg:grid-cols-[92px_1fr]' : 'sm:grid-cols-[92px_1fr]'} sm:items-start`}>
       <legend className="contents">
         <span className="min-w-0">
           <span className="block pt-1.5 font-mono text-[9px] uppercase tracking-[.17em] text-white/32">{title}</span>
