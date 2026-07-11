@@ -44,23 +44,29 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: #080706; font
   .difficulty-pill-medium { @apply border border-orange-300/30 bg-orange-950/55 text-orange-100; }
   .difficulty-pill-hard { @apply border border-red-300/35 bg-red-950/60 text-red-100; }
   .difficulty-pill-very-hard { @apply border border-purple-300/35 bg-purple-950/60 text-purple-100; }
-  .difficulty-pill-masterpiece { @apply border border-white/25 text-white shadow-[0_0_24px_rgba(255,79,216,.18)]; background: conic-gradient(from var(--rainbow-angle), #ff2b2b, #ffb800, #fff45c, #21d17c, #27b8ff, #8b5cf6, #ff4fd8, #ff2b2b); animation: rainbow-border 3.5s linear infinite; text-shadow: 0 1px 8px rgba(0,0,0,.42); }
+  .difficulty-pill-masterpiece { @apply border border-white/25 text-white shadow-[0_0_24px_rgba(255,79,216,.18)]; background-image: linear-gradient(90deg, #4a1018, #5a3309, #565016, #0d4a34, #0a3656, #281c5c, #561948, #4a1018); background-size: 260% 100%; animation: rainbow-slide 4.5s linear infinite; text-shadow: 0 1px 8px rgba(0,0,0,.62); }
 }
 
 .difficulty-frame-masterpiece {
-  background: conic-gradient(from var(--rainbow-angle), #ff2b2b, #ffb800, #fff45c, #21d17c, #27b8ff, #8b5cf6, #ff4fd8, #ff2b2b);
+  background: linear-gradient(90deg, #ff2b2b, #ffb800, #fff45c, #21d17c, #27b8ff, #8b5cf6, #ff4fd8, #ff2b2b);
+  background-size: 260% 100%;
   box-shadow: 0 0 42px rgba(255, 79, 216, .22), 0 0 34px rgba(255, 216, 59, .14);
-  animation: rainbow-border 3.5s linear infinite;
+  animation: rainbow-slide 4.5s linear infinite;
 }
 
-@property --rainbow-angle {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 0deg;
+.difficulty-rainbow-slide {
+  background: linear-gradient(180deg, #ff2b2b, #ffb800, #fff45c, #21d17c, #27b8ff, #8b5cf6, #ff4fd8, #ff2b2b);
+  background-size: 100% 260%;
+  box-shadow: 0 0 24px rgba(255, 79, 216, .22), 0 0 18px rgba(255, 216, 59, .12);
+  animation: rainbow-slide-y 4.5s linear infinite;
 }
 
-@keyframes rainbow-border {
-  to { --rainbow-angle: 360deg; }
+@keyframes rainbow-slide {
+  to { background-position: 260% 50%; }
+}
+
+@keyframes rainbow-slide-y {
+  to { background-position: 50% 260%; }
 }
 
 .hero-orb {
@@ -97,5 +103,5 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: #080706; font
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .difficulty-frame-masterpiece, .difficulty-pill-masterpiece { animation: none; }
+  .difficulty-frame-masterpiece, .difficulty-pill-masterpiece, .difficulty-rainbow-slide { animation: none; }
 }

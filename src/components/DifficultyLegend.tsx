@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Info, Sparkles } from 'lucide-react'
+import { Info } from 'lucide-react'
 import { useState } from 'react'
 import { getDifficultyMeta } from '../lib/videoMeta'
 import type { VideoDifficulty } from '../types'
@@ -68,7 +68,7 @@ export default function DifficultyLegend() {
         transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
         className="relative mt-5 overflow-hidden rounded-2xl border border-white/[.075] bg-black/20 p-4 md:p-5"
       >
-        <div className={`pointer-events-none absolute inset-y-0 left-0 w-1 ${activeLevel.value === 'masterpiece' ? 'difficulty-frame-masterpiece' : activeMeta.frameClass}`} />
+        <div className={`pointer-events-none absolute inset-y-0 left-0 w-1 ${activeLevel.value === 'masterpiece' ? 'difficulty-rainbow-slide' : activeMeta.frameClass}`} />
         <div className="pointer-events-none absolute -right-16 -top-24 h-56 w-56 rounded-full bg-flame/10 blur-3xl" />
         <div className="relative flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
@@ -77,7 +77,6 @@ export default function DifficultyLegend() {
                 <span className={`h-1.5 w-1.5 rounded-full ${activeMeta.dotClass}`} />
                 {activeMeta.label}
               </span>
-              {activeLevel.value === 'masterpiece' && <Sparkles size={15} className="text-solar" />}
             </div>
             <p className="mt-3 font-display text-xl font-semibold tracking-[-.03em] text-white/88">{activeLevel.short}</p>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-white/48">{activeLevel.description}</p>
