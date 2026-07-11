@@ -20,7 +20,7 @@ const games = [
   { value: 'other games', label: 'Other games' },
 ]
 
-const styleOrder = ['promo edit', 'sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'rocket league edit', 'lacly style edit', 'game edit']
+const styleOrder = ['promo edit', 'sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'lacly style edit']
 const label = (value: string) => value === 'all' ? 'All' : value.charAt(0).toUpperCase() + value.slice(1)
 
 export default function VideoFilters({ filters, onChange, count, videos }: { filters: Filters; onChange: (filters: Filters) => void; count: number; videos: VideoItem[] }) {
@@ -29,7 +29,7 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
       .filter((video) => filters.type === 'all' || video.type === filters.type)
       .filter((video) => filters.category === 'all' || video.category === filters.category)
       .filter((video) => filters.game === 'all' || video.tags.includes(filters.game))
-    const styles = new Set(scoped.map((video) => video.style))
+    const styles = new Set(scoped.map((video) => video.style).filter((style) => style !== 'altro'))
     return ['all', ...styleOrder.filter((style) => styles.has(style))]
   }, [filters.category, filters.game, filters.type, videos])
 

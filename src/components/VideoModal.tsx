@@ -11,6 +11,7 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
   const difficulty = getDifficultyMeta(video?.difficulty)
   const [measuredRatio, setMeasuredRatio] = useState<string>()
   const viewerStyle = getViewerStyle(measuredRatio || video?.aspectRatio)
+  const hasDisplayStyle = Boolean(video?.style && video.style !== 'altro')
   useEffect(() => {
     if (!video) return
     const previousOverflow = document.body.style.overflow
@@ -31,7 +32,7 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
             <Player video={video} onRatioChange={setMeasuredRatio} />
             <div className="p-5 md:p-7">
               <div>
-                <div className="eyebrow mb-3"><span className="h-1 w-1 rounded-full bg-flame" />{video.type === 'my-edit' ? 'Personal work' : 'Commissioned work'} · {video.style} · {formatMonthYear(video.date)}</div>
+                <div className="eyebrow mb-3"><span className="h-1 w-1 rounded-full bg-flame" />{video.type === 'my-edit' ? 'Personal work' : 'Commissioned work'}{hasDisplayStyle && <> · {video.style}</>} · {formatMonthYear(video.date)}</div>
                 <div className="flex flex-wrap items-center gap-3">
                   <h2 className="font-display text-2xl font-semibold md:text-3xl">{video.title}</h2>
                   <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md ${difficulty.pillClass}`}>

@@ -9,6 +9,7 @@ export default function VideoCard({ video, onOpen }: { video: VideoItem; onOpen:
   const [src, setSrc] = useState(publicUrl(video.thumbnailUrl || 'thumbnails/fallback.svg'))
   const difficulty = getDifficultyMeta(video.difficulty)
   const aspectRatio = normalizeAspectRatio(video.aspectRatio)
+  const hasDisplayStyle = video.style && video.style !== 'altro'
   return (
     <motion.article initial={false} className="group min-w-0">
       <button onClick={() => onOpen(video)} className="block w-full text-left focus-ring" aria-label={`Play ${video.title}`}>
@@ -16,9 +17,9 @@ export default function VideoCard({ video, onOpen }: { video: VideoItem; onOpen:
           <div className="relative aspect-video overflow-hidden rounded-[1.28rem] bg-panel shadow-2xl shadow-black/25" style={aspectRatio ? { aspectRatio } : undefined}>
             <img src={src} onError={() => setSrc(publicUrl('thumbnails/fallback.svg'))} alt={`${video.title} thumbnail`} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.045] group-hover:saturate-125" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/35 opacity-90 transition-opacity group-hover:opacity-70" />
-            <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-4">
-              <span className="rounded-full border border-white/15 bg-black/45 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] text-white/70 backdrop-blur-md">{video.style}</span>
-              <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md ${difficulty.pillClass}`}>
+            <div className="absolute inset-x-0 top-0 flex items-start gap-3 p-4">
+              {hasDisplayStyle && <span className="rounded-full border border-white/15 bg-black/45 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] text-white/70 backdrop-blur-md">{video.style}</span>}
+              <span className={`ml-auto inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md ${difficulty.pillClass}`}>
                 <span className={`h-1.5 w-1.5 rounded-full ${difficulty.dotClass}`} />
                 {difficulty.label}
               </span>
