@@ -1,4 +1,4 @@
-import { RotateCcw, Search } from 'lucide-react'
+import { ArrowUpDown, RotateCcw, Search } from 'lucide-react'
 import { useMemo } from 'react'
 import type { Filters, VideoItem } from '../types'
 
@@ -20,8 +20,15 @@ const games = [
   { value: 'other games', label: 'Other games' },
 ]
 
-const styleOrder = ['promo edit', 'sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'lacly style edit']
+const styleOrder = ['sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'lacly style edit']
 const label = (value: string) => value === 'all' ? 'All' : value.charAt(0).toUpperCase() + value.slice(1)
+
+const sortOptions: Array<{ value: Filters['sort']; label: string }> = [
+  { value: 'date-desc', label: 'Newest first' },
+  { value: 'date-asc', label: 'Oldest first' },
+  { value: 'difficulty-asc', label: 'Difficulty ↑' },
+  { value: 'difficulty-desc', label: 'Difficulty ↓' },
+]
 
 export default function VideoFilters({ filters, onChange, count, videos }: { filters: Filters; onChange: (filters: Filters) => void; count: number; videos: VideoItem[] }) {
   const availableStyles = useMemo(() => {
@@ -34,7 +41,7 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
   }, [filters.category, filters.game, filters.type, videos])
 
   const patch = (next: Partial<Filters>) => onChange({ ...filters, ...next })
-  const reset = () => onChange({ type: 'all', category: 'all', game: 'all', style: 'all', search: '' })
+  const reset = () => onChange({ type: 'all', category: 'all', game: 'all', style: 'all', search: '', sort: 'date-desc' })
   const setType = (type: string) => patch({ type: type as Filters['type'], style: 'all' })
   const setCategory = (category: string) => patch({ category, game: 'all', style: 'all' })
   const setGame = (game: string) => patch({ game, style: 'all' })
@@ -54,6 +61,13 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/35" />
             <input value={filters.search} onChange={(event) => patch({ search: event.target.value })} placeholder="Search title or tag..." className="h-12 w-full rounded-full border border-white/[.09] bg-black/20 pl-11 pr-4 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-flame/60 focus:ring-2 focus:ring-flame/15" />
           </label>
+          <label className="relative block sm:w-44">
+            <span className="sr-only">Sort videos</span>
+            <ArrowUpDown size={15} className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/35" />
+            <select value={filters.sort} onChange={(event) => patch({ sort: event.target.value as Filters['sort'] })} className="h-12 w-full appearance-none rounded-full border border-white/[.09] bg-black/20 pl-10 pr-4 text-xs font-semibold text-white/62 outline-none transition hover:border-white/20 focus:border-flame/60 focus:ring-2 focus:ring-flame/15">
+              {sortOptions.map((option) => <option key={option.value} value={option.value} className="bg-ink text-white">{option.label}</option>)}
+            </select>
+          </label>
           <button onClick={reset} className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/[.08] bg-black/20 px-4 text-xs text-white/42 transition hover:border-flame/35 hover:text-flame focus-ring"><RotateCcw size={13} /> Reset</button>
         </div>
       </div>
@@ -70,7 +84,7 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
 
       <div className="mt-5 flex items-center justify-between border-t border-white/[.07] pt-4 font-mono text-[9px] uppercase tracking-[.16em] text-white/28">
         <span>{count} {count === 1 ? 'result' : 'results'}</span>
-        <span>Newest first</span>
+        <span>{sortOptions.find((option) => option.value === filters.sort)?.label}</span>
       </div>
     </section>
   )

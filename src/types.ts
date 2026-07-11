@@ -1,6 +1,7 @@
 export type VideoType = 'my-edit' | 'commissioned'
 export type VideoSource = 'local' | 'direct' | 'cloud' | 'youtube' | 'vimeo' | 'dailymotion' | 'external'
 export type VideoDifficulty = 'easy' | 'medium' | 'hard' | 'very hard' | 'masterpiece'
+export type VideoSort = 'date-desc' | 'date-asc' | 'difficulty-asc' | 'difficulty-desc'
 
 export interface VideoItem {
   title: string
@@ -56,4 +57,5 @@ export interface Filters {
   game: string
   style: string
   search: string
+  sort: VideoSort
 }

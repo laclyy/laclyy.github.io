@@ -5,7 +5,7 @@ import VideoGrid from '../components/VideoGrid'
 import { useFilteredVideos } from '../lib/videos'
 import type { Filters, VideoItem } from '../types'
 
-const initialFilters: Filters = { type: 'all', category: 'all', game: 'all', style: 'all', search: '' }
+const initialFilters: Filters = { type: 'all', category: 'all', game: 'all', style: 'all', search: '', sort: 'date-desc' }
 
 export default function VideosPage({ videos, loading, onOpen }: { videos: VideoItem[]; loading: boolean; onOpen: (video: VideoItem) => void }) {
   const [filters, setFilters] = useState<Filters>(initialFilters)

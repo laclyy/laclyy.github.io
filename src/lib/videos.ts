@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Filters, VideoItem, VideoSource } from '../types'
 import { loadJson } from './content'
+import { normalizeDifficulty } from './videoMeta'
 
 interface VideoFile { videos: VideoItem[] }
 
@@ -27,8 +28,28 @@ export function useFilteredVideos(videos: VideoItem[], filters: Filters) {
       .filter((video) => filters.game === 'all' || video.tags.includes(filters.game))
       .filter((video) => filters.style === 'all' || video.style === filters.style)
       .filter((video) => !query || `${video.title} ${video.description} ${video.style} ${video.tags.join(' ')}`.toLocaleLowerCase('en').includes(query))
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .sort((a, b) => sortVideos(a, b, filters.sort))
   }, [filters, videos])
+}
+
+const difficultyRank = {
+  easy: 1,
+  medium: 2,
+  hard: 3,
+  'very hard': 4,
+  masterpiece: 5,
+} as const
+
+function sortVideos(a: VideoItem, b: VideoItem, sort: Filters['sort']) {
+  const dateA = new Date(a.date).getTime()
+  const dateB = new Date(b.date).getTime()
+  const difficultyA = difficultyRank[normalizeDifficulty(a.difficulty) ?? 'easy']
+  const difficultyB = difficultyRank[normalizeDifficulty(b.difficulty) ?? 'easy']
+
+  if (sort === 'date-asc') return dateA - dateB
+  if (sort === 'difficulty-asc') return difficultyA - difficultyB || dateB - dateA
+  if (sort === 'difficulty-desc') return difficultyB - difficultyA || dateB - dateA
+  return dateB - dateA
 }
 
 export function detectSource(url: string, declared?: VideoSource): VideoSource {
