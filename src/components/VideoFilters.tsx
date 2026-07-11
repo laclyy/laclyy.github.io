@@ -1,5 +1,6 @@
-import { ArrowUpDown, RotateCcw, Search } from 'lucide-react'
-import { useMemo } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ArrowUpDown, ChevronDown, RotateCcw, Search } from 'lucide-react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Filters, VideoItem } from '../types'
 
 const projectTypes = [
@@ -61,13 +62,7 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/35" />
             <input value={filters.search} onChange={(event) => patch({ search: event.target.value })} placeholder="Search title or tag..." className="h-12 w-full rounded-full border border-white/[.09] bg-black/20 pl-11 pr-4 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-flame/60 focus:ring-2 focus:ring-flame/15" />
           </label>
-          <label className="relative block sm:w-44">
-            <span className="sr-only">Sort videos</span>
-            <ArrowUpDown size={15} className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/35" />
-            <select value={filters.sort} onChange={(event) => patch({ sort: event.target.value as Filters['sort'] })} className="h-12 w-full appearance-none rounded-full border border-white/[.09] bg-black/20 pl-10 pr-4 text-xs font-semibold text-white/62 outline-none transition hover:border-white/20 focus:border-flame/60 focus:ring-2 focus:ring-flame/15">
-              {sortOptions.map((option) => <option key={option.value} value={option.value} className="bg-ink text-white">{option.label}</option>)}
-            </select>
-          </label>
+          <SortDropdown value={filters.sort} onChange={(sort) => patch({ sort })} />
           <button onClick={reset} className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/[.08] bg-black/20 px-4 text-xs text-white/42 transition hover:border-flame/35 hover:text-flame focus-ring"><RotateCcw size={13} /> Reset</button>
         </div>
       </div>
@@ -87,6 +82,81 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
         <span>{sortOptions.find((option) => option.value === filters.sort)?.label}</span>
       </div>
     </section>
+  )
+}
+
+function SortDropdown({ value, onChange }: { value: Filters['sort']; onChange: (value: Filters['sort']) => void }) {
+  const [open, setOpen] = useState(false)
+  const rootRef = useRef<HTMLDivElement>(null)
+  const selected = sortOptions.find((option) => option.value === value) ?? sortOptions[0]
+
+  useEffect(() => {
+    if (!open) return
+    const onPointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) setOpen(false)
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('pointerdown', onPointerDown)
+    window.addEventListener('keydown', onKeyDown)
+    return () => {
+      window.removeEventListener('pointerdown', onPointerDown)
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [open])
+
+  return (
+    <div ref={rootRef} className="relative z-30 sm:w-48">
+      <button
+        type="button"
+        onClick={() => setOpen((current) => !current)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className={`group flex h-12 w-full items-center gap-2 rounded-full border px-4 text-left text-xs font-semibold outline-none transition duration-300 focus-ring ${open ? 'border-flame/45 bg-flame/10 text-white/70 shadow-[0_0_24px_rgba(255,45,45,.10)]' : 'border-white/[.09] bg-black/20 text-white/45 hover:border-white/18 hover:text-white/60'}`}
+      >
+        <ArrowUpDown size={15} className={`shrink-0 transition ${open ? 'text-flame' : 'text-white/32 group-hover:text-white/45'}`} />
+        <span className="min-w-0 flex-1 truncate">{selected.label}</span>
+        <ChevronDown size={14} className={`shrink-0 text-white/30 transition duration-300 ${open ? 'rotate-180 text-flame/80' : 'group-hover:text-white/45'}`} />
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -6, scale: 0.98 }}
+            animate={{ opacity: 1, y: 8, scale: 1 }}
+            exit={{ opacity: 0, y: -4, scale: 0.98 }}
+            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute right-0 top-full w-full overflow-hidden rounded-2xl border border-white/[.10] bg-[#080605]/95 p-1.5 shadow-[0_22px_70px_rgba(0,0,0,.55)] backdrop-blur-xl"
+            role="listbox"
+            aria-label="Sort videos"
+          >
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,45,45,.14),transparent_48%)]" />
+            <div className="relative space-y-1">
+              {sortOptions.map((option) => {
+                const active = option.value === value
+                return (
+                  <button
+                    key={option.value}
+                    type="button"
+                    role="option"
+                    aria-selected={active}
+                    onClick={() => {
+                      onChange(option.value)
+                      setOpen(false)
+                    }}
+                    className={`flex w-full items-center justify-between rounded-xl px-3.5 py-2.5 text-left text-xs transition focus-ring ${active ? 'bg-flame/12 text-flame' : 'text-white/42 hover:bg-white/[.045] hover:text-white/68'}`}
+                  >
+                    <span>{option.label}</span>
+                    {active && <span className="h-1.5 w-1.5 rounded-full bg-flame shadow-[0_0_12px_rgba(255,45,45,.65)]" />}
+                  </button>
+                )
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }
 
