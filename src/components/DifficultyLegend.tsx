@@ -86,8 +86,8 @@ export default function DifficultyLegend() {
 
       <div className="mt-3 flex flex-col gap-3 rounded-2xl border border-white/[.07] bg-black/15 p-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-mono text-[9px] uppercase tracking-[.16em] text-white/30">Separate editor favorite tag</p>
-          <p className="mt-1 text-sm leading-6 text-white/48">Masterpiece is not a difficulty anymore. A video can be Medium and still be marked as Masterpiece.</p>
+          <p className="font-mono text-[9px] uppercase tracking-[.16em] text-white/30">Editor’s pick</p>
+          <p className="mt-1 text-sm leading-6 text-white/48">Masterpiece marks Lacly’s favorite cuts: edits with a stronger identity, cleaner impact, or a final result that stands out in the archive.</p>
         </div>
         <span className="inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] difficulty-pill-masterpiece">
           <span className="h-1.5 w-1.5 rounded-full bg-white" />

@@ -1960,7 +1960,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/flow%20edits/riyo%20reaper%20flow%20edit%2060fps.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "masterpiece",
+      "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "flow"

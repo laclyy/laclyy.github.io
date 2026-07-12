@@ -14,8 +14,8 @@ export default function VideoCard({ video, onOpen }: { video: VideoItem; onOpen:
   return (
     <motion.article initial={false} className="group min-w-0">
       <button onClick={() => onOpen(video)} className="block w-full text-left focus-ring" aria-label={`Play ${video.title}`}>
-        <div className={`relative rounded-[1.35rem] p-[1px] ${frameClass}`}>
-          <div className="relative aspect-video overflow-hidden rounded-[1.28rem] bg-panel shadow-2xl shadow-black/25" style={aspectRatio ? { aspectRatio } : undefined}>
+        <div className={`relative rounded-[1.45rem] p-[2px] ${frameClass}`}>
+          <div className="relative aspect-video overflow-hidden rounded-[1.32rem] bg-panel shadow-2xl shadow-black/25" style={aspectRatio ? { aspectRatio } : undefined}>
             <img src={src} onError={() => setSrc(publicUrl('thumbnails/fallback.svg'))} alt={`${video.title} thumbnail`} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.045] group-hover:saturate-125" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/35 opacity-90 transition-opacity group-hover:opacity-70" />
             <div className="absolute inset-x-0 top-0 flex items-start gap-3 p-4">
