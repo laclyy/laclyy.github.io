@@ -32,12 +32,6 @@ const difficultyMeta: Record<VideoDifficulty, DifficultyMeta> = {
     pillClass: 'difficulty-pill-very-hard',
     dotClass: 'bg-purple-300',
   },
-  masterpiece: {
-    label: 'Masterpiece',
-    frameClass: 'difficulty-frame-masterpiece',
-    pillClass: 'difficulty-pill-masterpiece',
-    dotClass: 'bg-white',
-  },
 }
 
 export function getDifficultyMeta(difficulty?: string): DifficultyMeta {

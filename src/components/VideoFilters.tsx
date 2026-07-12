@@ -21,7 +21,7 @@ const games = [
   { value: 'other games', label: 'Other games' },
 ]
 
-const styleOrder = ['sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'lacly style edit']
+const styleOrder = ['sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'flow edit', 'lacly style edit']
 const label = (value: string) => value === 'all' ? 'All' : value.charAt(0).toUpperCase() + value.slice(1)
 
 const sortOptions: Array<{ value: Filters['sort']; label: string }> = [

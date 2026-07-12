@@ -35,6 +35,12 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
                 <div className="eyebrow mb-3"><span className="h-1 w-1 rounded-full bg-flame" />{video.type === 'my-edit' ? 'Personal work' : 'Commissioned work'}{hasDisplayStyle && <> · {video.style}</>} · {formatMonthYear(video.date)}</div>
                 <div className="flex flex-wrap items-center gap-3">
                   <h2 className="font-display text-2xl font-semibold md:text-3xl">{video.title}</h2>
+                  {video.masterpiece && (
+                    <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md difficulty-pill-masterpiece">
+                      <span className="h-1.5 w-1.5 rounded-full bg-white" />
+                      Masterpiece
+                    </span>
+                  )}
                   <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md ${difficulty.pillClass}`}>
                     <span className={`h-1.5 w-1.5 rounded-full ${difficulty.dotClass}`} />
                     {difficulty.label}

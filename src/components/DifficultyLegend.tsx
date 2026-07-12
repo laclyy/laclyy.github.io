@@ -9,7 +9,6 @@ const levels: Array<{ value: VideoDifficulty; short: string; description: string
   { value: 'medium', short: 'more layers and polish', description: 'More layered syncing, stronger transitions, extra polish, and a more deliberate edit rhythm.' },
   { value: 'hard', short: 'advanced timing and motion', description: 'Complex timing, tighter motion work, heavier sound accents, and transitions that require more precision.' },
   { value: 'very hard', short: 'dense, complex sequencing', description: 'Dense sequencing with multiple effects, fast changes, detailed sync, and a high level of control.' },
-  { value: 'masterpiece', short: 'signature-level execution', description: 'A showcase-level edit: standout concept, premium polish, high complexity, strong identity, and final-result impact.' },
 ]
 
 export default function DifficultyLegend() {
@@ -68,7 +67,7 @@ export default function DifficultyLegend() {
         transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
         className="relative mt-5 overflow-hidden rounded-2xl border border-white/[.075] bg-black/20 p-4 md:p-5"
       >
-        <div className={`pointer-events-none absolute inset-y-0 left-0 w-1 ${activeLevel.value === 'masterpiece' ? 'difficulty-rainbow-slide' : activeMeta.frameClass}`} />
+        <div className={`pointer-events-none absolute inset-y-0 left-0 w-1 ${activeMeta.frameClass}`} />
         <div className="pointer-events-none absolute -right-16 -top-24 h-56 w-56 rounded-full bg-flame/10 blur-3xl" />
         <div className="relative flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
@@ -84,6 +83,17 @@ export default function DifficultyLegend() {
           <span className="font-mono text-[9px] uppercase tracking-[.16em] text-white/25">Tap or hover</span>
         </div>
       </motion.div>
+
+      <div className="mt-3 flex flex-col gap-3 rounded-2xl border border-white/[.07] bg-black/15 p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="font-mono text-[9px] uppercase tracking-[.16em] text-white/30">Separate editor favorite tag</p>
+          <p className="mt-1 text-sm leading-6 text-white/48">Masterpiece is not a difficulty anymore. A video can be Medium and still be marked as Masterpiece.</p>
+        </div>
+        <span className="inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] difficulty-pill-masterpiece">
+          <span className="h-1.5 w-1.5 rounded-full bg-white" />
+          Masterpiece
+        </span>
+      </div>
     </motion.aside>
   )
 }

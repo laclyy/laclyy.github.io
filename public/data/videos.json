@@ -4,12 +4,13 @@
     "title: non inserire la difficoltà tra parentesi; la difficoltà va solo nel campo difficulty.",
     "type: usa my-edit oppure commissioned. Commissioned indica i lavori commissionati, non uno stile.",
     "category: usa anime oppure videogiochi in base alla cartella principale.",
-    "style: viene usato come targhetta sulla card. Può essere una label di sezione come promo edit o commission edit, oppure uno stile reale come sigma boy, tiktok edit, trend edit, vibe edit, lacly style edit. Solo gli stili reali appaiono nel filtro Style.",
+    "style: viene usato come targhetta sulla card. Può essere una label di sezione come promo edit o commission edit, oppure uno stile reale come sigma boy, tiktok edit, trend edit, vibe edit, flow edit, lacly style edit. Solo gli stili reali appaiono nel filtro Style.",
     "source: per i video del server usa cloud.",
-    "difficulty: usa easy, medium, hard, very hard oppure masterpiece.",
-    "tags: usa solo tag brevi e utili derivati dalle cartelle, per esempio anime, gaming, rocket league, other games, promo, tiktok, trend, vibe, commission, lacly style.",
+    "difficulty: usa solo easy, medium, hard oppure very hard. Non usare masterpiece qui: masterpiece è un campo separato.",
+    "tags: usa solo tag brevi e utili derivati dalle cartelle, per esempio anime, gaming, rocket league, other games, promo, tiktok, trend, vibe, flow, commission, lacly style.",
     "thumbnailUrl: le thumbnail sono PNG nella cartella thumbnails e hanno lo stesso nome del video.",
     "aspectRatio: se conosci il formato reale puoi usare 16/9, 9/16, 1/1 oppure 4/5. Il player legge comunque i metadata del video quando apre la modale.",
+    "masterpiece: usa true per i video preferiti/signature dell’editor. È una targhetta separata dalla difficoltà, quindi un video può essere medium e masterpiece allo stesso tempo.",
     "Imposta featured su true per mostrare il video anche in home."
   ],
   "videos": [
@@ -24,6 +25,7 @@
       "source": "cloud",
       "aspectRatio": "1/1",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -43,6 +45,7 @@
       "source": "cloud",
       "aspectRatio": "9/10",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -62,6 +65,7 @@
       "source": "cloud",
       "aspectRatio": "3/4",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -81,6 +85,7 @@
       "source": "cloud",
       "aspectRatio": "9/10",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -100,6 +105,7 @@
       "source": "cloud",
       "aspectRatio": "9/10",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -119,6 +125,7 @@
       "source": "cloud",
       "aspectRatio": "9/10",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -138,6 +145,7 @@
       "source": "cloud",
       "aspectRatio": "18/25",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -157,6 +165,7 @@
       "source": "cloud",
       "aspectRatio": "3/4",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -176,6 +185,7 @@
       "source": "cloud",
       "aspectRatio": "3/4",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -195,6 +205,7 @@
       "source": "cloud",
       "aspectRatio": "9/10",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "promo",
@@ -214,6 +225,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "sigma boys"
@@ -232,6 +244,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "sigma boys"
@@ -250,6 +263,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "sigma boys"
@@ -268,6 +282,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "sigma boys"
@@ -286,6 +301,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -303,7 +319,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/anya%20x%20gojo%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "tiktok"
@@ -322,6 +339,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -340,6 +358,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -358,6 +377,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -376,6 +396,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -394,6 +415,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -412,6 +434,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -430,6 +453,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -448,6 +472,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -466,6 +491,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -484,6 +510,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -501,7 +528,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/kurumi%20yandere%20animation%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "tiktok"
@@ -520,6 +548,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -538,6 +567,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -556,6 +586,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -574,6 +605,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -592,6 +624,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -609,7 +642,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/nightmare%20x%20white%20queen%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "tiktok"
@@ -628,6 +662,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -646,6 +681,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -664,6 +700,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -682,6 +719,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -700,6 +738,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -718,6 +757,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -736,6 +776,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -754,6 +795,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -772,6 +814,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -790,6 +833,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -808,6 +852,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "tiktok"
@@ -826,6 +871,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -844,6 +890,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -862,6 +909,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -880,6 +928,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -898,6 +947,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -916,6 +966,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -934,6 +985,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -952,6 +1004,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -970,6 +1023,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "anime",
         "trend"
@@ -988,6 +1042,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1006,6 +1061,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1023,7 +1079,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/kurumi%20vibe%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "vibe"
@@ -1041,7 +1098,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/lacly%20mii%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "vibe"
@@ -1060,6 +1118,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1078,6 +1137,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1096,6 +1156,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1113,7 +1174,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/reze%20film%20edit%20%2818k%29%20typo%20style%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "vibe"
@@ -1132,6 +1194,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1149,7 +1212,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/Takt%20Op.%20Destiny%20vibe%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "vibe"
@@ -1167,7 +1231,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/the%20eminence%20in%20shadow%20x%20morto%20mai%20%28piano%20solo%29%20vibe%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "vibe"
@@ -1185,7 +1250,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/tokyo%20ghoul%20vibe%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "vibe"
@@ -1203,7 +1269,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/violet%20evergarden%20vibestyle%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "9/16",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "anime",
         "vibe"
@@ -1222,6 +1289,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1240,6 +1308,7 @@
       "source": "cloud",
       "aspectRatio": "9/16",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "anime",
         "vibe"
@@ -1258,6 +1327,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "other games"
@@ -1276,6 +1346,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "other games"
@@ -1294,6 +1365,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "easy",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "other games"
@@ -1312,6 +1384,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "other games"
@@ -1330,6 +1403,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1349,6 +1423,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1368,6 +1443,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1387,6 +1463,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1405,7 +1482,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/commission%20edits/nixus%20shiiya%20rl%20edit%20x%20kurumi%20by%20lacly%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "gaming",
         "rocket league",
@@ -1425,6 +1503,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1444,6 +1523,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1463,6 +1543,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1481,7 +1562,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20death%20note%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "gaming",
         "rocket league",
@@ -1501,6 +1583,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1519,7 +1602,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20edit%20x%20rezee%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "gaming",
         "rocket league",
@@ -1539,6 +1623,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1558,6 +1643,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1577,6 +1663,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1596,6 +1683,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1614,7 +1702,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/waguri%20and%20rintaro%20rl%20edit%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "gaming",
         "rocket league",
@@ -1634,6 +1723,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1653,6 +1743,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "medium",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1672,6 +1763,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1691,6 +1783,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1710,6 +1803,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1729,6 +1823,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1748,6 +1843,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1766,7 +1862,8 @@
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/vibe%20edits/rl%20vibe%20edit%20landslide%28masterpiece%29.mp4",
       "source": "cloud",
       "aspectRatio": "16/9",
-      "difficulty": "masterpiece",
+      "difficulty": "medium",
+      "masterpiece": true,
       "tags": [
         "gaming",
         "rocket league",
@@ -1786,6 +1883,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1805,6 +1903,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",
@@ -1824,6 +1923,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
+      "masterpiece": false,
       "tags": [
         "gaming",
         "rocket league",

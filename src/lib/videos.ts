@@ -27,7 +27,7 @@ export function useFilteredVideos(videos: VideoItem[], filters: Filters) {
       .filter((video) => filters.category === 'all' || video.category === filters.category)
       .filter((video) => filters.game === 'all' || video.tags.includes(filters.game))
       .filter((video) => filters.style === 'all' || video.style === filters.style)
-      .filter((video) => !query || `${video.title} ${video.description} ${video.style} ${video.tags.join(' ')}`.toLocaleLowerCase('en').includes(query))
+      .filter((video) => !query || `${video.title} ${video.description} ${video.style} ${video.masterpiece ? 'masterpiece editor favorite' : ''} ${video.tags.join(' ')}`.toLocaleLowerCase('en').includes(query))
       .sort((a, b) => sortVideos(a, b, filters.sort))
   }, [filters, videos])
 }
@@ -37,7 +37,6 @@ const difficultyRank = {
   medium: 2,
   hard: 3,
   'very hard': 4,
-  masterpiece: 5,
 } as const
 
 function sortVideos(a: VideoItem, b: VideoItem, sort: Filters['sort']) {

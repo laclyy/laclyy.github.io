@@ -1,6 +1,6 @@
 export type VideoType = 'my-edit' | 'commissioned'
 export type VideoSource = 'local' | 'direct' | 'cloud' | 'youtube' | 'vimeo' | 'dailymotion' | 'external'
-export type VideoDifficulty = 'easy' | 'medium' | 'hard' | 'very hard' | 'masterpiece'
+export type VideoDifficulty = 'easy' | 'medium' | 'hard' | 'very hard'
 export type VideoSort = 'date-desc' | 'date-asc' | 'difficulty-asc' | 'difficulty-desc'
 
 export interface VideoItem {
@@ -14,6 +14,7 @@ export interface VideoItem {
   source: VideoSource
   aspectRatio?: string
   difficulty?: VideoDifficulty
+  masterpiece?: boolean
   tags: string[]
   featured: boolean
   date: string
