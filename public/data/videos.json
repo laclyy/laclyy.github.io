@@ -318,7 +318,7 @@
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/anya%20x%20gojo%20edit%28masterpiece%29.png",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/anya%20x%20gojo%20edit%28masterpiece%29.mp4",
       "source": "cloud",
-      "aspectRatio": "9/16",
+      "aspectRatio": "3/4",
       "difficulty": "medium",
       "masterpiece": true,
       "tags": [
@@ -527,7 +527,7 @@
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/kurumi%20yandere%20animation%28masterpiece%29.png",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/kurumi%20yandere%20animation%28masterpiece%29.mp4",
       "source": "cloud",
-      "aspectRatio": "9/16",
+      "aspectRatio": "54/65",
       "difficulty": "very hard",
       "masterpiece": true,
       "tags": [
@@ -641,7 +641,7 @@
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/nightmare%20x%20white%20queen%28masterpiece%29.png",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/nightmare%20x%20white%20queen%28masterpiece%29.mp4",
       "source": "cloud",
-      "aspectRatio": "9/16",
+      "aspectRatio": "27/35",
       "difficulty": "medium",
       "masterpiece": true,
       "tags": [
@@ -1943,6 +1943,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
+      "masterpiece": true,
       "tags": [
         "anime",
         "flow"
@@ -1961,7 +1962,7 @@
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
-      "masterpiece": false,
+      "masterpiece": true,
       "tags": [
         "anime",
         "flow"
