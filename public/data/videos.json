@@ -43,7 +43,7 @@
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/maki%20promo%20edit%28medium%29.png",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/maki%20promo%20edit%28medium%29.mp4",
       "source": "cloud",
-      "aspectRatio": "9/10",
+      "aspectRatio": "1080/1200",
       "difficulty": "medium",
       "masterpiece": false,
       "tags": [
@@ -63,7 +63,7 @@
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/promotion%20and%20commission%20edits/nazuna%20edit%28easy%29.png",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/promotion%20and%20commission%20edits/nazuna%20edit%28easy%29.mp4",
       "source": "cloud",
-      "aspectRatio": "3/4",
+      "aspectRatio": "1080/1440",
       "difficulty": "easy",
       "masterpiece": false,
       "tags": [
@@ -1383,7 +1383,7 @@
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/other%20games%20edits/arknights%20comp%20animations%20edit%28very%20hard%29.png",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/other%20games%20edits/arknights%20comp%20animations%20edit%28very%20hard%29.mp4",
       "source": "cloud",
-      "aspectRatio": "16/9",
+      "aspectRatio": "1350/1080",
       "difficulty": "very hard",
       "masterpiece": false,
       "tags": [
@@ -2188,8 +2188,8 @@
       "type": "my-edit",
       "category": "anime",
       "style": "vibe edit",
-      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/Kizumonogatari%20I%20Araragi%20and%20Hanekawa%20first%20meet%20vibe%20edit.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/Kizumonogatari%20I%20Araragi%20and%20Hanekawa%20first%20meet%20vibe%20edit.mp4",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/Kizumonogatari%20vibe%20edit.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/Kizumonogatari%20vibe%20edit.mp4",
       "source": "cloud",
       "aspectRatio": "1550/900",
       "difficulty": "hard",
