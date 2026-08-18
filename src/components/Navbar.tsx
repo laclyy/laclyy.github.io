@@ -44,7 +44,7 @@ export default function Navbar({ profile }: { profile: Profile }) {
           })}
         </div>
 
-        <Link to="/contact" className="button-secondary hidden md:inline-flex">Start a project <span aria-hidden="true">↗</span></Link>
+        <Link to="/contact" className="button-secondary hidden md:inline-flex">Commission me <span aria-hidden="true">↗</span></Link>
         <button className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/[.04] focus-ring md:hidden" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-label={open ? 'Close menu' : 'Open menu'}>
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>

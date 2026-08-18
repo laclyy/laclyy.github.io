@@ -11,7 +11,10 @@ export function useVideos() {
 
   useEffect(() => {
     loadJson<VideoFile | VideoItem[]>('data/videos.json')
-      .then((data) => setVideos(Array.isArray(data) ? data : data.videos ?? []))
+      .then((data) => {
+        const list = Array.isArray(data) ? data : data.videos ?? []
+        setVideos(list.filter((video) => Boolean(video && video.title && video.title.trim())))
+      })
       .catch(console.error)
       .finally(() => setLoading(false))
   }, [])
