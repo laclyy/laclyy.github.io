@@ -1977,8 +1977,8 @@
       "type": "my-edit",
       "category": "gfx",
       "style": "",
-      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/bitrobozo.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/bitrobozo.png",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/bitrobozo.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/bitrobozo.png",
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "hard",
@@ -1996,8 +1996,8 @@
       "type": "my-edit",
       "category": "gfx",
       "style": "",
-      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/gramma_thumb_00361.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/gramma_thumb_00361.png",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/gramma_thumb_00361.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/gramma_thumb_00361.png",
       "source": "cloud",
       "aspectRatio": "16/9",
       "difficulty": "very hard",
@@ -2015,8 +2015,8 @@
       "type": "my-edit",
       "category": "gfx",
       "style": "",
-      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/lacly_pfp.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/lacly_pfp.png",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/lacly_pfp.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/lacly_pfp.png",
       "source": "cloud",
       "aspectRatio": "1/1",
       "difficulty": "hard",
@@ -2034,8 +2034,8 @@
       "type": "my-edit",
       "category": "gfx",
       "style": "",
-      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/m1styc_pfp.png",
-      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/m1styc_pfp.png",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/m1styc_pfp.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/gfx/m1styc_pfp.png",
       "source": "cloud",
       "aspectRatio": "1/1",
       "difficulty": "medium",
@@ -2048,10 +2048,31 @@
       "date": "2026-07-10"
     },
         {
+      "title": "rl x makima edit",
+      "description": "rl x makima edit by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "lacly style edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20x%20makima%20edit.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/game%20edits/rocket%20league%20edits/lacly%27s%20style%20edits/rl%20x%20makima%20edit.mp4",
+      "source": "cloud",
+      "aspectRatio": "9/16",
+      "difficulty": "very hard",
+      "masterpiece": true,
+      "tags": [
+        "gaming",
+        "rocket league",
+        "lacly style",
+        "makima"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
       "title": "",
       "description": "",
       "type": "my-edit",
-      "category": "gfx",
+      "category": "",
       "style": "",
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/",
@@ -2060,8 +2081,141 @@
       "difficulty": "medium",
       "masterpiece": false,
       "tags": [
-        "anime",
-        "gfx"
+        "",
+        ""
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "",
+        ""
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "",
+        ""
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "",
+        ""
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "",
+        ""
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "",
+        ""
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "",
+        ""
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "",
+        ""
       ],
       "featured": false,
       "date": "2026-07-10"
