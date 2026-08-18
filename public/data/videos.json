@@ -2046,6 +2046,25 @@
       ],
       "featured": false,
       "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "gfx",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "anime",
+        "gfx"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
     }
   ]
 }

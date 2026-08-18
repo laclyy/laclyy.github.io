@@ -71,34 +71,41 @@ function Player({ video, onRatioChange }: { video: VideoItem; onRatioChange: (ra
 }
 
 function DirectMediaPlayer({ video, onRatioChange }: { video: VideoItem; onRatioChange: (ratio: string) => void }) {
-  const initialRatio = getRatioInfo(video.aspectRatio || '16/9')
+  const isImage = video.category === 'gfx' || isImageMediaUrl(video.videoUrl)
+  const initialRatio = getRatioInfo(video.aspectRatio || (isImage ? undefined : '16/9'))
   const [ratio, setRatio] = useState(initialRatio.css)
   const [ratioNumber, setRatioNumber] = useState(initialRatio.value)
   const [failed, setFailed] = useState(false)
-  const isImage = isImageMediaUrl(video.videoUrl) || video.category === 'gfx' || isImageMediaUrl(video.thumbnailUrl)
   const mediaUrl = publicUrl(video.videoUrl)
   const poster = publicUrl(video.thumbnailUrl || 'thumbnails/fallback.svg')
   const imageSrc = isImageMediaUrl(video.videoUrl) ? mediaUrl : (video.thumbnailUrl ? poster : mediaUrl)
 
   useEffect(() => {
-    const nextRatio = getRatioInfo(video.aspectRatio || '16/9')
+    const nextRatio = getRatioInfo(video.aspectRatio || (isImage ? undefined : '16/9'))
     setRatio(nextRatio.css)
     setRatioNumber(nextRatio.value)
     setFailed(false)
-  }, [video.aspectRatio, video.videoUrl])
+  }, [video.aspectRatio, video.videoUrl, isImage])
 
   if (isImage) {
     return (
       <div className="media-stage" style={getMediaElementStyle(ratio, ratioNumber)}>
-        <img src={imageSrc} alt={video.title} loading="lazy" decoding="async" className="media-element object-contain" onLoad={(event) => {
-          const image = event.currentTarget
-          if (!ratio && image.naturalWidth && image.naturalHeight) {
-            const nextRatio = `${image.naturalWidth} / ${image.naturalHeight}`
-            setRatio(nextRatio)
-            setRatioNumber(image.naturalWidth / image.naturalHeight)
-            onRatioChange(nextRatio)
-          }
-        }} />
+        <img
+          src={imageSrc}
+          alt={video.title}
+          loading="lazy"
+          decoding="async"
+          className="media-element"
+          onLoad={(event) => {
+            const image = event.currentTarget
+            if (image.naturalWidth && image.naturalHeight) {
+              const nextRatio = `${image.naturalWidth} / ${image.naturalHeight}`
+              setRatio(nextRatio)
+              setRatioNumber(image.naturalWidth / image.naturalHeight)
+              onRatioChange(nextRatio)
+            }
+          }}
+        />
       </div>
     )
   }
@@ -115,6 +122,7 @@ function DirectMediaPlayer({ video, onRatioChange }: { video: VideoItem; onRatio
       ) : (
         <video
           controls
+          autoPlay
           playsInline
           preload="metadata"
           poster={poster}
