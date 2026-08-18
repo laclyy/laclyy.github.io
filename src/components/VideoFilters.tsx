@@ -13,6 +13,7 @@ const categories = [
   { value: 'all', label: 'All' },
   { value: 'anime', label: 'Anime' },
   { value: 'videogiochi', label: 'Games' },
+  { value: 'gfx', label: 'GFX' },
 ]
 
 const games = [
@@ -21,8 +22,16 @@ const games = [
   { value: 'other games', label: 'Other games' },
 ]
 
-const styleOrder = ['sigma boy', 'tiktok edit', 'trend edit', 'vibe edit', 'flow edit', 'lacly style edit']
-const label = (value: string) => value === 'all' ? 'All' : value.charAt(0).toUpperCase() + value.slice(1)
+const defaultStyleOrder = [
+  'sigma boy',
+  'tiktok edit',
+  'jugg edit',
+  'trend edit',
+  'vibe edit',
+  'flow edit',
+  'lacly style edit',
+]
+const label = (value: string) => (value === 'all' ? 'All' : value.charAt(0).toUpperCase() + value.slice(1))
 
 const sortOptions: Array<{ value: Filters['sort']; label: string }> = [
   { value: 'date-desc', label: 'Newest first' },
@@ -31,14 +40,19 @@ const sortOptions: Array<{ value: Filters['sort']; label: string }> = [
   { value: 'difficulty-desc', label: 'Difficulty ↓' },
 ]
 
+const excludedStyles = new Set(['altro', 'promo edit', 'commission edit', 'gfx', ''])
+
 export default function VideoFilters({ filters, onChange, count, videos }: { filters: Filters; onChange: (filters: Filters) => void; count: number; videos: VideoItem[] }) {
   const availableStyles = useMemo(() => {
+    if (filters.category === 'gfx') return []
     const scoped = videos
       .filter((video) => filters.type === 'all' || video.type === filters.type)
       .filter((video) => filters.category === 'all' || video.category === filters.category)
       .filter((video) => filters.game === 'all' || video.tags.includes(filters.game))
-    const styles = new Set(scoped.map((video) => video.style).filter((style) => style !== 'altro'))
-    return ['all', ...styleOrder.filter((style) => styles.has(style))]
+    const styles = new Set(scoped.map((video) => video.style).filter((style) => Boolean(style) && !excludedStyles.has(style)))
+    const ordered = defaultStyleOrder.filter((style) => styles.has(style))
+    const dynamic = Array.from(styles).filter((style) => !defaultStyleOrder.includes(style))
+    return ['all', ...ordered, ...dynamic]
   }, [filters.category, filters.game, filters.type, videos])
 
   const patch = (next: Partial<Filters>) => onChange({ ...filters, ...next })
@@ -46,6 +60,8 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
   const setType = (type: string) => patch({ type: type as Filters['type'], style: 'all' })
   const setCategory = (category: string) => patch({ category, game: 'all', style: 'all' })
   const setGame = (game: string) => patch({ game, style: 'all' })
+
+  const showStyleFilters = filters.category !== 'gfx' && availableStyles.length > 1
 
   return (
     <section className="rounded-[2rem] border border-white/[.08] bg-white/[.025] p-4 shadow-2xl shadow-black/10 backdrop-blur-sm md:p-6" aria-label="Video filters">
@@ -74,7 +90,9 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
           <FilterStrip title="Game" values={games} active={filters.game} onClick={setGame} />
         )}
 
-        <FilterStrip title="Style" values={availableStyles.map((value) => ({ value, label: label(value) }))} active={filters.style} onClick={(style) => patch({ style })} wide />
+        {showStyleFilters && (
+          <FilterStrip title="Style" values={availableStyles.map((value) => ({ value, label: label(value) }))} active={filters.style} onClick={(style) => patch({ style })} wide />
+        )}
       </div>
 
       <div className="mt-5 flex items-center justify-between border-t border-white/[.07] pt-4 font-mono text-[9px] uppercase tracking-[.16em] text-white/28">

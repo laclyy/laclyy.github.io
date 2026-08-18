@@ -48,6 +48,8 @@ export interface SocialItem {
   username?: string
   value?: string
   url: string
+  platform?: string
+  icon?: string
 }
 
 export type Socials = Record<string, SocialItem>

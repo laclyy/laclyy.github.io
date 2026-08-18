@@ -1,29 +1,24 @@
 {
-  "_help": "Puoi aggiungere o rimuovere social seguendo la stessa struttura. Lascia url vuoto per nascondere un contatto. Per le commissioni inserisci l'invite del server Discord in discord.url.",
+  "_help": "Puoi aggiungere o rimuovere social seguendo la stessa struttura (es. tiktok_main, tiktok_edits, tiktok2: l'icona viene rilevata automaticamente). Lascia url vuoto per nascondere un contatto. Per le commissioni inserisci l'invite del server Discord in discord.url.",
   "discord": {
     "label": "Discord",
-    "username": "lacly",
-    "url": "https://discord.gg/XpZ7ZnAeSK"
+    "username": "lacly's Paradise",
+    "url": "https://discord.gg/mSZw6TKxu4"
   },
-  "instagram": {
-    "label": "Instagram",
-    "username": "@lacly",
-    "url": "https://instagram.com/lacly"
-  },
-  "tiktok": {
+  "tiktok_main": {
     "label": "TikTok",
-    "username": "@lacly",
-    "url": "https://tiktok.com/@lacly"
+    "username": "@laclyyvfx",
+    "url": "https://tiktok.com/@laclyyvfx"
   },
   "youtube": {
     "label": "YouTube",
     "username": "Lacly",
     "url": "https://youtube.com/@lacly"
   },
-  "x": {
-    "label": "X / Twitter",
-    "username": "@lacly",
-    "url": "https://x.com/lacly"
+  "tiktok_rl": {
+    "label": "TikTok",
+    "username": "Nixus lacly",
+    "url": "https://tiktok.com/@laclikkaa"
   },
   "email": {
     "label": "Email",

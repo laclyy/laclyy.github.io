@@ -56,11 +56,12 @@ export function detectSource(url: string, declared?: VideoSource): VideoSource {
   if (/youtu\.be|youtube\.com/i.test(url)) return 'youtube'
   if (/vimeo\.com/i.test(url)) return 'vimeo'
   if (/dailymotion\.com|dai\.ly/i.test(url)) return 'dailymotion'
-  if (isDirectMediaUrl(url)) return /^https?:/i.test(url) ? 'direct' : 'local'
+  if (isDirectMediaUrl(url) || isImageMediaUrl(url)) return /^https?:/i.test(url) ? 'direct' : 'local'
   return 'external'
 }
 
-export function isDirectMediaSource(video: Pick<VideoItem, 'source' | 'videoUrl'>): boolean {
+export function isDirectMediaSource(video: Pick<VideoItem, 'source' | 'videoUrl'> & { category?: string }): boolean {
+  if (video.category === 'gfx' || isImageMediaUrl(video.videoUrl)) return true
   const source = detectSource(video.videoUrl, video.source)
   return source === 'local' || source === 'direct' || source === 'cloud'
 }

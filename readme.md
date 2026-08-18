@@ -68,8 +68,8 @@ Apri `public/data/videos.json`. Dentro la sezione `videos`, copia un blocco esis
 Valori disponibili:
 
 - `type`: `my-edit` oppure `commissioned`.
-- `category`: `anime`, `videogiochi` oppure `altro`.
-- `style`: `simple edit`, `vibe edit`, `typography`, `promo edit`, `flow edit`, `cinematic edit`, `amv`, `gmv` oppure `altro`.
+- `category`: `anime`, `videogiochi` oppure `gfx` (la sezione `gfx` è dedicata alle immagini/grafiche e non mostra sottofiltri).
+- `style`: `simple edit`, `vibe edit`, `jugg edit`, `typography`, `promo edit`, `flow edit`, `sigma boy`, `tiktok edit`, `lacly style edit`, `cinematic edit`, `amv`, `gmv` oppure `altro`. Per i GFX puoi lasciare `""` o inserire un'etichetta descrittiva come `banner`, `thumbnail`, `poster`, ecc.
 - `source`: `local`, `direct`, `cloud`, `youtube`, `vimeo`, `dailymotion` oppure `external`.
 - `aspectRatio`: molto consigliato per i video caricati sul server. Serve per aprire subito popup e card nella dimensione corretta, anche prima che il video parta. Puoi usare `16/9`, `9/16`, `1/1`, `4/5`, ecc.
 - `difficulty`: `easy`, `medium`, `hard`, `very hard` oppure `masterpiece`. Questo valore controlla il bordo colorato delle card video.
@@ -140,9 +140,34 @@ In `thumbnailUrl` puoi usare:
 
 - un URL completo esterno, per esempio `https://.../immagine.jpg`;
 - un’immagine locale inserita in `public/thumbnails`, per esempio `thumbnails/mia-cover.jpg`;
-- una stringa vuota `""`: il sito userà automaticamente la cover fallback.
+- una stringa vuota `""`: il sito userà automaticamente la cover fallback (o per i GFX il link diretto dell'immagine).
 
-Per un risultato nitido usa immagini 16:9 da circa 1280×720 px, ottimizzate in JPG, WebP o AVIF. Evita immagini molto pesanti. Le thumbnail vengono caricate in lazy loading.
+Per un risultato nitido usa immagini ottimizzate in JPG, WebP, AVIF o PNG. Le thumbnail vengono caricate in lazy loading.
+
+## Caricare immagini e grafiche (Sezione GFX)
+
+Puoi usare la categoria `gfx` per caricare banner, thumbnail create da te, wallpaper, grafiche 2D/3D o avatar:
+
+```json
+{
+  "title": "Titolo della Grafica",
+  "description": "Descrizione del progetto GFX.",
+  "type": "my-edit",
+  "category": "gfx",
+  "style": "",
+  "thumbnailUrl": "https://tuo-cloud.com/gfx/banner.png",
+  "videoUrl": "https://tuo-cloud.com/gfx/banner.png",
+  "source": "cloud",
+  "aspectRatio": "16/9",
+  "tags": ["gfx", "banner", "photoshop"],
+  "featured": false,
+  "date": "2026-08-18"
+}
+```
+
+- Nel filtro `Category`, cliccando su **GFX** verranno mostrate solo le immagini, **senza sottofiltri**.
+- Sulle card GFX apparirà l'icona con l'occhio (`Eye`) invece del tasto play.
+- Cliccando sulla card si aprirà l'immagine in alta definizione nella modale.
 
 ## Cambiare immagine profilo / logo
 
@@ -196,6 +221,23 @@ Il flusso commissioni principale è Discord ticket, quindi l’email è solo un 
 Apri `public/data/socials.json` e modifica `username` e `url`. Per l’email usa `value` e un URL nel formato `mailto:indirizzo@email.it`.
 
 Puoi eliminare un intero social oppure lasciare `url` vuoto per nasconderlo. Per aggiungerne uno, copia un blocco esistente, cambia la chiave iniziale e inserisci etichetta, username e URL.
+
+### Come inserire più account TikTok (o altri social multipli)
+
+Il sito rileva automaticamente l'icona della piattaforma in base alla chiave, al link o al campo `platform`. Puoi aggiungere quanti account TikTok desideri:
+
+```json
+"tiktok_main": {
+  "label": "TikTok (Main)",
+  "username": "@lacly",
+  "url": "https://tiktok.com/@lacly"
+},
+"tiktok_edits": {
+  "label": "TikTok (Edits)",
+  "username": "@lacly_edits",
+  "url": "https://tiktok.com/@lacly_edits"
+}
+```
 
 Per attivare il bottone delle commissioni via Discord ticket, modifica il blocco `discord` così:
 

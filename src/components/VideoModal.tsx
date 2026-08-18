@@ -32,7 +32,11 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
             <Player video={video} onRatioChange={setMeasuredRatio} />
             <div className="p-5 md:p-7">
               <div>
-                <div className="eyebrow mb-3"><span className="h-1 w-1 rounded-full bg-flame" />{video.type === 'my-edit' ? 'Personal work' : 'Commissioned work'}{hasDisplayStyle && <> · {video.style}</>} · {formatMonthYear(video.date)}</div>
+                <div className="eyebrow mb-3">
+                  <span className="h-1 w-1 rounded-full bg-flame" />
+                  {video.category === 'gfx' ? 'GFX Artwork' : video.type === 'my-edit' ? 'Personal work' : 'Commissioned work'}
+                  {hasDisplayStyle && <> · {video.style}</>} · {formatMonthYear(video.date)}
+                </div>
                 <div className="flex flex-wrap items-center gap-3">
                   <h2 className="font-display text-2xl font-semibold md:text-3xl">{video.title}</h2>
                   {video.masterpiece && (
@@ -41,10 +45,12 @@ export default function VideoModal({ video, onClose }: { video: VideoItem | null
                       Masterpiece
                     </span>
                   )}
-                  <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md ${difficulty.pillClass}`}>
-                    <span className={`h-1.5 w-1.5 rounded-full ${difficulty.dotClass}`} />
-                    {difficulty.label}
-                  </span>
+                  {video.difficulty && (
+                    <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] backdrop-blur-md ${difficulty.pillClass}`}>
+                      <span className={`h-1.5 w-1.5 rounded-full ${difficulty.dotClass}`} />
+                      {difficulty.label}
+                    </span>
+                  )}
                 </div>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-white/48">{video.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">{video.tags.map((tag) => <span key={tag} className="font-mono text-[9px] uppercase tracking-[.12em] text-white/28">#{tag}</span>)}</div>
@@ -69,8 +75,10 @@ function DirectMediaPlayer({ video, onRatioChange }: { video: VideoItem; onRatio
   const [ratio, setRatio] = useState(initialRatio.css)
   const [ratioNumber, setRatioNumber] = useState(initialRatio.value)
   const [failed, setFailed] = useState(false)
+  const isImage = isImageMediaUrl(video.videoUrl) || video.category === 'gfx' || isImageMediaUrl(video.thumbnailUrl)
   const mediaUrl = publicUrl(video.videoUrl)
   const poster = publicUrl(video.thumbnailUrl || 'thumbnails/fallback.svg')
+  const imageSrc = isImageMediaUrl(video.videoUrl) ? mediaUrl : (video.thumbnailUrl ? poster : mediaUrl)
 
   useEffect(() => {
     const nextRatio = getRatioInfo(video.aspectRatio || '16/9')
@@ -79,10 +87,10 @@ function DirectMediaPlayer({ video, onRatioChange }: { video: VideoItem; onRatio
     setFailed(false)
   }, [video.aspectRatio, video.videoUrl])
 
-  if (isImageMediaUrl(video.videoUrl)) {
+  if (isImage) {
     return (
       <div className="media-stage" style={getMediaElementStyle(ratio, ratioNumber)}>
-        <img src={mediaUrl} alt={video.title} loading="lazy" decoding="async" className="media-element" onLoad={(event) => {
+        <img src={imageSrc} alt={video.title} loading="lazy" decoding="async" className="media-element object-contain" onLoad={(event) => {
           const image = event.currentTarget
           if (!ratio && image.naturalWidth && image.naturalHeight) {
             const nextRatio = `${image.naturalWidth} / ${image.naturalHeight}`

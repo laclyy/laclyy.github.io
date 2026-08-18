@@ -7,7 +7,13 @@ import type { Profile } from '../types'
 export default function Hero({ profile }: { profile: Profile }) {
   const { scrollY } = useScroll()
   const glowY = useTransform(scrollY, [0, 700], [0, 180])
-  const titleParts = profile.heroTitle.split(/(?<=\.)\s+/, 2)
+  const lines = profile.heroTitle.split('\n')
+  const titleParts = lines.length > 1
+    ? lines
+    : profile.heroTitle.includes('.')
+      ? profile.heroTitle.split(/(?<=\.)\s+/, 2)
+      : [profile.heroTitle]
+
   return (
     <section className="relative flex min-h-[760px] items-center overflow-hidden pb-20 pt-32 md:min-h-screen md:pb-28 md:pt-40">
       <motion.div style={{ y: glowY }} className="hero-orb pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full md:right-[-8%] md:h-[760px] md:w-[760px]" />
@@ -24,7 +30,7 @@ export default function Hero({ profile }: { profile: Profile }) {
             <div className="mb-7 flex items-center gap-4 rounded-3xl border border-white/[.08] bg-white/[.035] p-3 pr-5 backdrop-blur-md">
               <ProfileAvatar profile={profile} size="md" priority />
               <div className="min-w-0">
-                <span className="block font-mono text-[9px] uppercase tracking-[.16em] text-white/35">Editor identity</span>
+                <span className="block font-mono text-[9px] uppercase tracking-[.16em] text-white/35">Creator</span>
                 <span className="mt-1 block truncate font-display text-lg font-semibold">{profile.name}</span>
               </div>
             </div>

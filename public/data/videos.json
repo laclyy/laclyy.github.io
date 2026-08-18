@@ -3,8 +3,8 @@
     "Aggiungi un video copiando un elemento dentro videos e cambiando i valori.",
     "title: non inserire la difficoltà tra parentesi; la difficoltà va solo nel campo difficulty.",
     "type: usa my-edit oppure commissioned. Commissioned indica i lavori commissionati, non uno stile.",
-    "category: usa anime oppure videogiochi in base alla cartella principale.",
-    "style: viene usato come targhetta sulla card. Può essere una label di sezione come promo edit o commission edit, oppure uno stile reale come sigma boy, tiktok edit, trend edit, vibe edit, flow edit, lacly style edit. Solo gli stili reali appaiono nel filtro Style.",
+    "category: usa anime, videogiochi oppure gfx (la sezione gfx non ha sottofiltri ed è pensata per le immagini e le grafiche).",
+    "style: viene usato come targhetta sulla card. Può essere una label di sezione come promo edit o commission edit, oppure uno stile reale come sigma boy, tiktok edit, jugg edit, trend edit, vibe edit, flow edit, lacly style edit. Solo gli stili reali appaiono nel filtro Style.",
     "source: per i video del server usa cloud.",
     "difficulty: usa solo easy, medium, hard oppure very hard. Non usare masterpiece qui: masterpiece è un campo separato.",
     "tags: usa solo tag brevi e utili derivati dalle cartelle, per esempio anime, gaming, rocket league, other games, promo, tiktok, trend, vibe, flow, commission, lacly style.",
@@ -751,7 +751,7 @@
       "description": "shikimori jugg edit by Lacly.",
       "type": "my-edit",
       "category": "anime",
-      "style": "tiktok edit",
+      "style": "jugg edit",
       "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/tiktok%20edits/shikimori%20jugg%20edit%28medium%29.png",
       "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/tiktok%20edits/shikimori%20jugg%20edit%28medium%29.mp4",
       "source": "cloud",
@@ -760,7 +760,8 @@
       "masterpiece": false,
       "tags": [
         "anime",
-        "tiktok"
+        "tiktok",
+        "jugg"
       ],
       "featured": false,
       "date": "2026-07-10"

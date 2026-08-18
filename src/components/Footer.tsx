@@ -4,7 +4,7 @@ import ProfileAvatar from './ProfileAvatar'
 import type { Profile, Socials } from '../types'
 
 export default function Footer({ profile, socials }: { profile: Profile; socials: Socials }) {
-  const visible = Object.entries(socials).filter(([, social]) => social.url && !social.url.startsWith('mailto:')).slice(0, 5)
+  const visible = Object.entries(socials).filter(([, social]) => social.url && !social.url.startsWith('mailto:'))
   return (
     <footer className="border-t border-white/[.07] bg-black/20">
       <div className="shell py-10 md:py-14">
@@ -25,8 +25,8 @@ export default function Footer({ profile, socials }: { profile: Profile; socials
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-white/[.07] pt-6 font-mono text-[10px] uppercase tracking-[.16em] text-white/30 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} {profile.name}. All cuts reserved.</span>
-          <span>Designed for motion · Built for speed</span>
+          <span>© {new Date().getFullYear()} {profile.name} · Official Edit Page</span>
+          <span>Anime · Games · GFX</span>
         </div>
       </div>
     </footer>
