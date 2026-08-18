@@ -1970,6 +1970,82 @@
       ],
       "featured": false,
       "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "gfx",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/bitrobozo.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/bitrobozo.png",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "hard",
+      "masterpiece": false,
+      "tags": [
+        "anime",
+        "gfx"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "gfx",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/gramma_thumb_00361.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/gramma_thumb_00361.png",
+      "source": "cloud",
+      "aspectRatio": "16/9",
+      "difficulty": "very hard",
+      "masterpiece": false,
+      "tags": [
+        "anime",
+        "gfx"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "gfx",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/lacly_pfp.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/lacly_pfp.png",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "hard",
+      "masterpiece": false,
+      "tags": [
+        "anime",
+        "gfx"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
+    },
+        {
+      "title": "",
+      "description": "",
+      "type": "my-edit",
+      "category": "gfx",
+      "style": "",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/gfx/m1styc_pfp.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/gfx/m1styc_pfp.png",
+      "source": "cloud",
+      "aspectRatio": "1/1",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "anime",
+        "gfx"
+      ],
+      "featured": false,
+      "date": "2026-07-10"
     }
   ]
 }
