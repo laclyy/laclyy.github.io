@@ -5,6 +5,18 @@ import { normalizeDifficulty } from './videoMeta'
 
 interface VideoFile { videos: VideoItem[] }
 
+function extractTitleFromUrl(url?: string): string {
+  if (!url) return 'Untitled'
+  const clean = url.split('?')[0].split('#')[0]
+  const filename = clean.substring(clean.lastIndexOf('/') + 1)
+  const withoutExt = filename.substring(0, filename.lastIndexOf('.')) || filename
+  try {
+    return decodeURIComponent(withoutExt).replace(/[-_]+/g, ' ')
+  } catch {
+    return withoutExt.replace(/[-_]+/g, ' ')
+  }
+}
+
 export function useVideos() {
   const [videos, setVideos] = useState<VideoItem[]>([])
   const [loading, setLoading] = useState(true)
@@ -13,7 +25,14 @@ export function useVideos() {
     loadJson<VideoFile | VideoItem[]>('data/videos.json')
       .then((data) => {
         const list = Array.isArray(data) ? data : data.videos ?? []
-        setVideos(list.filter((video) => Boolean(video && video.title && video.title.trim())))
+        const valid = list
+          .filter((v) => Boolean(v && (v.videoUrl?.trim() || v.thumbnailUrl?.trim() || v.title?.trim())))
+          .map((v) => ({
+            ...v,
+            title: v.title && v.title.trim() ? v.title : extractTitleFromUrl(v.videoUrl || v.thumbnailUrl),
+            tags: Array.isArray(v.tags) ? v.tags.filter(Boolean) : [],
+          }))
+        setVideos(valid)
       })
       .catch(console.error)
       .finally(() => setLoading(false))
