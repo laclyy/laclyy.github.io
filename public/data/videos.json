@@ -2219,5 +2219,25 @@
       "featured": false,
       "date": "2026-08-20"
     }
+    ,
+        {
+      "title": "violet evergarden vibe edit (eyes without a face)",
+      "description": "violet evergarden vibe edit (eyes without a face) by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://sitodaking.it:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/violet%20evergarden%20vibe%20edit%20eyes%20without%20a%20face.png",
+      "videoUrl": "https://sitodaking.it:8443/video-lacly/video/anime%20edits/vibe%20edits/violet%20evergarden%20vibe%20edit%20eyes%20without%20a%20face.mp4",
+      "source": "cloud",
+      "aspectRatio": "1920/1080",
+      "difficulty": "very hard",
+      "masterpiece": true,
+      "tags": [
+        "anime",
+        "vibe edit"
+      ],
+      "featured": false,
+      "date": "2026-09-05"
+    }
   ]
 }
