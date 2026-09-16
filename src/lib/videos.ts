@@ -5,7 +5,7 @@ import { normalizeDifficulty } from './videoMeta'
 
 interface VideoFile { videos: VideoItem[] }
 
-function extractTitleFromUrl(url?: string): string {
+export function extractTitleFromUrl(url?: string): string {
   if (!url) return 'Untitled'
   const clean = url.split('?')[0].split('#')[0]
   const filename = clean.substring(clean.lastIndexOf('/') + 1)

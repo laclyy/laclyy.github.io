@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Footer from './components/Footer'
@@ -12,7 +12,14 @@ import HomePage from './pages/HomePage'
 import VideosPage from './pages/VideosPage'
 import type { VideoItem } from './types'
 
+const AdminPage = lazy(() => import('./pages/AdminPage'))
+
 export default function App() {
+  // L'area /admin ha un layout suo e viene scaricata solo da chi la apre.
+  return <Routes><Route path="/admin/*" element={<Suspense fallback={<div className="min-h-screen bg-ink" />}><AdminPage /></Suspense>} /><Route path="*" element={<Site />} /></Routes>
+}
+
+function Site() {
   const { profile } = useProfile()
   const socials = useSocials()
   const { videos, loading } = useVideos()

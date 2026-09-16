@@ -14,7 +14,7 @@ const explicitIcons: Record<string, ComponentType<{ size?: number }>> = {
   email: Mail,
 }
 
-function resolveSocialIcon(key: string, social: SocialItem): ComponentType<{ size?: number }> {
+export function resolveSocialIcon(key: string, social: SocialItem): ComponentType<{ size?: number }> {
   const k = key.toLowerCase()
   const p = (social.platform || social.icon || '').toLowerCase()
   const u = (social.url || '').toLowerCase()
