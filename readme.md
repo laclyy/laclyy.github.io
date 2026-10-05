@@ -83,7 +83,7 @@ Valori disponibili:
 
 Per rimuovere un video, elimina l’intero blocco da `{` a `}` e controlla le virgole tra i blocchi rimasti.
 
-La sezione tra “Need a custom edit?” e “Follow my work” mostra al massimo i tre featured più recenti (`"featured": true`). Se nessun lavoro è featured, mostra automaticamente i tre lavori più recenti, in base al campo `date`. Cliccando una card si apre il normale player del sito.
+La sezione dopo “Follow my work” e prima di “Need a custom edit?” mostra al massimo i tre featured più recenti (`"featured": true`). Se nessun lavoro è featured, mostra automaticamente i tre lavori più recenti, in base al campo `date`. Cliccando una card si apre il normale player del sito.
 
 ## Video esterni
 

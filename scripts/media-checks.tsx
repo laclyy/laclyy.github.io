@@ -52,8 +52,8 @@ import profile from '../public/data/profile.json'
   assert.ok(featured.includes('Open Project 1'))
   assert.ok(!featured.includes('Open Project 4'))
   const home = render(HomePage, videos)
-  assert.ok(home.indexOf(profile.contactTitle) < home.indexOf('Latest edits'))
-  assert.ok(home.indexOf('Latest edits') < home.indexOf('Follow my work'))
+  assert.ok(home.indexOf('Follow my work') < home.indexOf('Latest edits'))
+  assert.ok(home.indexOf('Latest edits') < home.indexOf(profile.contactTitle))
   const filters = { category: 'anime', subcategory: 'Blue Lock', type: 'all', game: 'all', style: 'all', search: '', sort: 'date-desc' }
   const mixed = [saved, { ...saved, title: 'Other anime', subcategory: 'Other series' }, { ...saved, title: 'Game', category: 'videogiochi', subcategory: 'Game category' }]
   function FilterResult() {
