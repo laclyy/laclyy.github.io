@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "test": "node scripts/check-media.mjs",
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && vite build && node scripts/copy-404.mjs",
     "preview": "vite preview"

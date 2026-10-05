@@ -33,7 +33,7 @@ export default function VideosManager({ token, publish }: { token: string; publi
     const q = query.trim().toLowerCase()
     return videos
       .filter((video) => category === 'all' || video.category === category)
-      .filter((video) => !q || `${video.title} ${video.style} ${video.tags?.join(' ')}`.toLowerCase().includes(q))
+      .filter((video) => !q || `${video.title} ${video.subcategory ?? ''} ${video.style} ${video.tags?.join(' ')}`.toLowerCase().includes(q))
       .sort((a, b) => b.date.localeCompare(a.date))
   }, [videos, query, category])
 
@@ -138,6 +138,7 @@ export default function VideosManager({ token, publish }: { token: string; publi
                   <span className="block truncate text-sm font-semibold text-white/90">{video.title}</span>
                   <span className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/40">
                     <span>{categoryOptions.find((option) => option.value === video.category)?.label ?? video.category}</span>
+                    {video.subcategory && <span>· {video.subcategory}</span>}
                     {video.style && <span>· {video.style}</span>}
                     {difficulty && <span className="inline-flex items-center gap-1.5">· <span className={`h-1.5 w-1.5 rounded-full ${difficulty.dotClass}`} />{difficulty.label}</span>}
                     <span>· {formatMonthYear(video.date)}</span>

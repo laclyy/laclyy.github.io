@@ -43,22 +43,30 @@ const sortOptions: Array<{ value: Filters['sort']; label: string }> = [
 const excludedStyles = new Set(['altro', 'promo edit', 'commission edit', 'gfx', ''])
 
 export default function VideoFilters({ filters, onChange, count, videos }: { filters: Filters; onChange: (filters: Filters) => void; count: number; videos: VideoItem[] }) {
+  const subcategories = useMemo(() => {
+    if (filters.category === 'all') return []
+    return Array.from(new Set(videos.filter((video) => video.category === filters.category && (filters.type === 'all' || video.type === filters.type))
+      .map((video) => video.subcategory).filter((value): value is string => Boolean(value))))
+      .sort((a, b) => a.localeCompare(b))
+  }, [filters.category, filters.type, videos])
+
   const availableStyles = useMemo(() => {
     if (filters.category === 'gfx') return []
     const scoped = videos
       .filter((video) => filters.type === 'all' || video.type === filters.type)
       .filter((video) => filters.category === 'all' || video.category === filters.category)
+      .filter((video) => !filters.subcategory || filters.subcategory === 'all' || video.subcategory === filters.subcategory)
       .filter((video) => filters.game === 'all' || video.tags.includes(filters.game))
     const styles = new Set(scoped.map((video) => video.style).filter((style) => Boolean(style) && !excludedStyles.has(style)))
     const ordered = defaultStyleOrder.filter((style) => styles.has(style))
     const dynamic = Array.from(styles).filter((style) => !defaultStyleOrder.includes(style))
     return ['all', ...ordered, ...dynamic]
-  }, [filters.category, filters.game, filters.type, videos])
+  }, [filters.category, filters.subcategory, filters.game, filters.type, videos])
 
   const patch = (next: Partial<Filters>) => onChange({ ...filters, ...next })
   const reset = () => onChange({ type: 'all', category: 'all', game: 'all', style: 'all', search: '', sort: 'date-desc' })
-  const setType = (type: string) => patch({ type: type as Filters['type'], style: 'all' })
-  const setCategory = (category: string) => patch({ category, game: 'all', style: 'all' })
+  const setType = (type: string) => patch({ type: type as Filters['type'], subcategory: 'all', style: 'all' })
+  const setCategory = (category: string) => patch({ category, subcategory: 'all', game: 'all', style: 'all' })
   const setGame = (game: string) => patch({ game, style: 'all' })
 
   const showStyleFilters = filters.category !== 'gfx' && availableStyles.length > 1
@@ -85,6 +93,10 @@ export default function VideoFilters({ filters, onChange, count, videos }: { fil
 
       <div className="mt-5 space-y-5 border-t border-white/[.07] pt-5">
         <FilterStrip title="Category" values={categories} active={filters.category} onClick={setCategory} />
+
+        {subcategories.length > 0 && (
+          <FilterStrip title="Subcategory" values={[{ value: 'all', label: 'All' }, ...subcategories.map((value) => ({ value, label: value }))]} active={filters.subcategory ?? 'all'} onClick={(subcategory) => patch({ subcategory, style: 'all' })} wide />
+        )}
 
         {filters.category === 'videogiochi' && (
           <FilterStrip title="Game" values={games} active={filters.game} onClick={setGame} />

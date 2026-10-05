@@ -66,7 +66,7 @@ export default function VideoForm({ original, allVideos, onCancel, onSave, onDel
     setDraft((current) => {
       const oldTags = new Set([...tagsForCategory(current.category), ...(category === 'videogiochi' ? [] : gameValues)])
       const tags = [...current.tags.filter((tag) => !oldTags.has(tag)), ...tagsForCategory(category)]
-      return { ...current, category, tags: Array.from(new Set(tags)), style: category === 'gfx' ? '' : current.style }
+      return { ...current, category, subcategory: '', tags: Array.from(new Set(tags)), style: category === 'gfx' ? '' : current.style }
     })
   }
 
@@ -138,6 +138,11 @@ export default function VideoForm({ original, allVideos, onCancel, onSave, onDel
     return Array.from(new Set([...styleSuggestions, ...used]))
   }, [allVideos])
 
+  const subcategories = useMemo(() => Array.from(new Set(allVideos
+    .filter((video) => video.category === draft.category)
+    .map((video) => video.subcategory?.trim()).filter((value): value is string => Boolean(value))))
+    .sort((a, b) => a.localeCompare(b)), [allVideos, draft.category])
+
   const duplicate = isNew && draft.videoUrl.trim() ? allVideos.find((video) => sameUrl(video.videoUrl, draft.videoUrl)) : undefined
   const preview = useMemo(() => finalizeVideo({ ...draft, title: draft.title.trim() || 'Titolo del video' }), [draft])
   const closePreview = useCallback(() => setPreviewOpen(false), [])
@@ -145,7 +150,7 @@ export default function VideoForm({ original, allVideos, onCancel, onSave, onDel
 
   const save = async () => {
     const nextErrors: Errors = {}
-    if (!isUsableUrl(draft.videoUrl)) nextErrors.videoUrl = 'Incolla un link valido che inizi con https://'
+    if (!isUsableUrl(draft.videoUrl)) nextErrors.videoUrl = 'Inserisci un percorso completo di estensione (.mp4, .png…) oppure un link https:// valido.'
     if (!draft.title.trim()) nextErrors.title = 'Scrivi un titolo.'
     if (!/^\d{4}-\d{2}-\d{2}$/.test(draft.date)) nextErrors.date = 'Scegli una data.'
     setErrors(nextErrors)
@@ -172,9 +177,10 @@ export default function VideoForm({ original, allVideos, onCancel, onSave, onDel
         <div className="space-y-7">
           {Object.keys(errors).length > 0 && <Notice tone="error">Controlla i campi evidenziati qui sotto.</Notice>}
 
-          <Field label="Link del video o dell’immagine" htmlFor="video-url" error={errors.videoUrl} hint="Incolla il link diretto al file sul cloud (.mp4, .png…). Vanno bene anche link YouTube o Vimeo.">
-            <input id="video-url" className="form-input" type="url" inputMode="url" value={draft.videoUrl} onChange={(event) => update('videoUrl', event.target.value)} placeholder="https://vanzakart.net:8443/video-lacly/video/…" />
+          <Field label="Percorso o link del video / immagine" htmlFor="video-url" error={errors.videoUrl} hint="Basta il percorso: il sito aggiunge https://vanzakart.net:8443 e codifica spazi e simboli. Puoi anche incollare un link completo, YouTube o Vimeo.">
+            <input id="video-url" className="form-input" type="text" value={draft.videoUrl} onChange={(event) => update('videoUrl', event.target.value)} placeholder="video-lacly/video/anime edits/sigma boys/nagi sigma boy(easy).mp4" />
           </Field>
+          {isUsableUrl(draft.videoUrl) && <p className="-mt-4 break-all text-xs leading-5 text-white/40"><span className="font-semibold text-white/60">Link automatico: </span>{normalizeUrl(draft.videoUrl)}</p>}
           {duplicate && <Notice tone="warning">Questo link è già sul sito, nel video «{duplicate.title}».</Notice>}
           {autofilled.length > 0 && (
             <Notice tone="success" action={<button type="button" onClick={() => setAutofilled([])} aria-label="Chiudi" className="text-white/50 hover:text-white"><X size={16} /></button>}>
@@ -182,9 +188,9 @@ export default function VideoForm({ original, allVideos, onCancel, onSave, onDel
             </Notice>
           )}
 
-          <Field label="Copertina (thumbnail)" htmlFor="video-thumb" hint={thumbStatus === 'missing' ? 'Non ho trovato la copertina sul cloud: incolla il link dell’immagine, oppure lascia vuoto per usare un’immagine generica.' : image ? 'Per le immagini GFX puoi lasciarlo vuoto: verrà usata l’immagine stessa.' : 'Link all’immagine di copertina. Se lo lasci vuoto verrà usata un’immagine generica.'}>
+          <Field label="Copertina (thumbnail)" htmlFor="video-thumb" hint={thumbStatus === 'missing' ? 'Non ho trovato la copertina sul cloud: inserisci il percorso o il link dell’immagine, oppure lascia vuoto per usare un’immagine generica.' : image ? 'Per le immagini GFX puoi lasciarlo vuoto: verrà usata l’immagine stessa.' : 'Percorso o link della copertina: server e codifica vengono aggiunti automaticamente. Se lo lasci vuoto verrà usata un’immagine generica.'}>
             <div className="flex items-center gap-3">
-              <input id="video-thumb" className="form-input" type="url" inputMode="url" value={draft.thumbnailUrl} onChange={(event) => { setThumbStatus('idle'); update('thumbnailUrl', event.target.value) }} placeholder="https://…/thumbnails/…png" />
+              <input id="video-thumb" className="form-input" type="text" value={draft.thumbnailUrl} onChange={(event) => { setThumbStatus('idle'); update('thumbnailUrl', event.target.value) }} placeholder="video-lacly/thumbnails/anime edits/…png" />
               {thumbStatus === 'checking' && <Spinner />}
             </div>
           </Field>
@@ -210,6 +216,14 @@ export default function VideoForm({ original, allVideos, onCancel, onSave, onDel
             <Choice label="Categoria" value={draft.category} options={categoryOptions} onChange={setCategory} />
           </Field>
 
+          <Field label="Sottocategoria (facoltativa)" htmlFor="video-subcategory" hint="Scegli una sottocategoria oppure scrivine una nuova. Dopo il salvataggio sarà selezionabile per gli altri video di questa categoria e nei filtri del sito.">
+            <select aria-label="Sottocategorie esistenti" className="form-input mb-3 [color-scheme:dark]" value={subcategories.includes(draft.subcategory ?? '') ? draft.subcategory : ''} onChange={(event) => update('subcategory', event.target.value)}>
+              <option value="">Nessuna / nuova sottocategoria</option>
+              {subcategories.map((value) => <option key={value} value={value}>{value}</option>)}
+            </select>
+            <input id="video-subcategory" className="form-input" value={draft.subcategory ?? ''} onChange={(event) => update('subcategory', event.target.value)} placeholder="es. Blue Lock" />
+          </Field>
+
           {draft.category === 'videogiochi' && (
             <Field label="Gioco" hint="Serve per il filtro “Game” nella pagina Video.">
               <Choice label="Gioco" value={game} options={gameOptions} onChange={setGame} />
@@ -232,7 +246,7 @@ export default function VideoForm({ original, allVideos, onCancel, onSave, onDel
           </Field>
 
           <div className="grid gap-3 sm:grid-cols-2">
-            <Toggle checked={Boolean(draft.featured)} onChange={(value) => update('featured', value)} label="In evidenza nella Home" hint="La Home mostra i 3 più recenti." />
+            <Toggle checked={Boolean(draft.featured)} onChange={(value) => update('featured', value)} label="In evidenza nella Home" hint="La Home mostra i 3 featured più recenti; senza featured, i 3 ultimi lavori." />
             <Toggle checked={Boolean(draft.masterpiece)} onChange={(value) => update('masterpiece', value)} label="Masterpiece" hint="Bordo arcobaleno: per i tuoi preferiti." />
           </div>
 

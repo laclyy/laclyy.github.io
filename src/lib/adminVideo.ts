@@ -84,6 +84,7 @@ export function emptyVideo(): VideoItem {
 
 export function isUsableUrl(url: string): boolean {
   const value = url.trim()
+  if (!value || (/^[a-z][a-z0-9+.-]*:/i.test(value) && !/^https?:\/\//i.test(value))) return false
   if (/^https?:\/\//i.test(value)) {
     try {
       return Boolean(new URL(value).hostname)
@@ -91,15 +92,34 @@ export function isUsableUrl(url: string): boolean {
       return false
     }
   }
-  return /^[\w./%()-]+\.[a-z0-9]{2,5}$/i.test(value)
+  return /\.[a-z0-9]{2,5}$/i.test(value) && !/[\r\n]/.test(value)
 }
 
-/** Codifica spazi e caratteri speciali di un link incollato così com'è da un file manager. */
+export const cloudOrigin = 'https://vanzakart.net:8443'
+
+/** Codifica ogni segmento senza ricodificare i caratteri già percent-encoded. */
+function encodePath(path: string): string {
+  return path.split('/').map((segment) =>
+    segment.split(/(%[a-f0-9]{2})/ig).map((part) =>
+      /^%[a-f0-9]{2}$/i.test(part) ? part.toUpperCase() : encodeURIComponent(part).replace(/[!'()*]/g, (char) => `%${char.charCodeAt(0).toString(16).toUpperCase()}`),
+    ).join(''),
+  ).join('/')
+}
+
+/** Accetta percorsi del cloud e URL completi, mantenendo query e fragment dei link. */
 export function normalizeUrl(url: string): string {
   const value = url.trim()
-  if (!/^https?:\/\//i.test(value)) return value
+  if (!value) return ''
+  if (!/^https?:\/\//i.test(value)) {
+    if (/^[a-z][a-z0-9+.-]*:/i.test(value)) return value
+    // Conserva i percorsi degli asset locali già supportati dal portfolio.
+    if (/^\/?(?:videos|thumbnails)\//i.test(value)) return encodePath(value)
+    return `${cloudOrigin}/${encodePath(value.replace(/\\/g, '/').replace(/^\/?\.\//, '').replace(/^\/+/, ''))}`
+  }
   try {
-    return new URL(value).href
+    const parsed = new URL(value)
+    parsed.pathname = encodePath(parsed.pathname)
+    return parsed.href
   } catch {
     return value
   }
@@ -157,13 +177,14 @@ export function sourceFor(url: string): VideoItem['source'] {
 /** Scrive il video con lo stesso ordine di campi usato nel JSON, eliminando valori vuoti opzionali. */
 export function finalizeVideo(draft: VideoItem): VideoItem {
   const title = draft.title.trim()
-  const { title: _t, description: _d, type, category, style, thumbnailUrl, videoUrl, source: _s, aspectRatio, difficulty, masterpiece, tags, featured, date, ...extra } = draft
+  const { title: _t, description: _d, type, category, subcategory, style, thumbnailUrl, videoUrl, source: _s, aspectRatio, difficulty, masterpiece, tags, featured, date, ...extra } = draft
   const url = normalizeUrl(videoUrl)
   return {
     title,
     description: draft.description.trim() || `${title} by Lacly.`,
     type,
     category,
+    ...(subcategory?.trim() ? { subcategory: subcategory.trim() } : {}),
     style: style.trim(),
     thumbnailUrl: normalizeUrl(thumbnailUrl),
     videoUrl: url,

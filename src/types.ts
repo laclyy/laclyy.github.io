@@ -8,6 +8,7 @@ export interface VideoItem {
   description: string
   type: VideoType
   category: string
+  subcategory?: string
   style: string
   thumbnailUrl: string
   videoUrl: string
@@ -57,6 +58,7 @@ export type Socials = Record<string, SocialItem>
 export interface Filters {
   type: 'all' | VideoType
   category: string
+  subcategory?: string
   game: string
   style: string
   search: string

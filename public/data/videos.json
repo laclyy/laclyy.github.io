@@ -3,7 +3,8 @@
     "Aggiungi un video copiando un elemento dentro videos e cambiando i valori.",
     "title: non inserire la difficoltà tra parentesi; la difficoltà va solo nel campo difficulty.",
     "type: usa my-edit oppure commissioned. Commissioned indica i lavori commissionati, non uno stile.",
-    "category: usa anime, videogiochi oppure gfx (la sezione gfx non ha sottofiltri ed è pensata per le immagini e le grafiche).",
+    "category: usa anime, videogiochi oppure gfx (per le immagini e le grafiche).",
+    "subcategory: facoltativa, per creare sottocategorie selezionabili sotto la categoria principale, per esempio Blue Lock sotto anime.",
     "style: viene usato come targhetta sulla card. Può essere una label di sezione come promo edit o commission edit, oppure uno stile reale come sigma boy, tiktok edit, jugg edit, trend edit, vibe edit, flow edit, lacly style edit. Solo gli stili reali appaiono nel filtro Style.",
     "source: per i video del server usa cloud.",
     "difficulty: usa solo easy, medium, hard oppure very hard. Non usare masterpiece qui: masterpiece è un campo separato.",
@@ -11,7 +12,7 @@
     "thumbnailUrl: le thumbnail sono PNG nella cartella thumbnails e hanno lo stesso nome del video.",
     "aspectRatio: se conosci il formato reale puoi usare 16/9, 9/16, 1/1 oppure 4/5. Il player legge comunque i metadata del video quando apre la modale.",
     "masterpiece: usa true per i video preferiti/signature dell’editor. È una targhetta separata dalla difficoltà, quindi un video può essere medium e masterpiece allo stesso tempo.",
-    "Imposta featured su true per mostrare il video anche in home."
+    "La home mostra i 3 featured più recenti; se nessun lavoro è featured, mostra i 3 lavori più recenti."
   ],
   "videos": [
     {

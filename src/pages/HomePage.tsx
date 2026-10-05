@@ -1,10 +1,11 @@
-import type { Profile, Socials } from '../types'
+import type { Profile, Socials, VideoItem } from '../types'
 import ContactSection from '../components/ContactSection'
+import FeaturedVideos from '../components/FeaturedVideos'
 import Hero from '../components/Hero'
 import ProfileAvatar from '../components/ProfileAvatar'
 import SocialLinks from '../components/SocialLinks'
 
-export default function HomePage({ profile, socials }: { profile: Profile; socials: Socials }) {
+export default function HomePage({ profile, socials, videos, loading, onOpen }: { profile: Profile; socials: Socials; videos: VideoItem[]; loading: boolean; onOpen: (video: VideoItem) => void }) {
   return (
     <>
       <Hero profile={profile} />
@@ -26,7 +27,13 @@ export default function HomePage({ profile, socials }: { profile: Profile; socia
               <p>{profile.styleDescription}</p>
             </div>
           </div>
-          <div className="mt-14 rounded-[1.75rem] border border-white/[.08] bg-black/20 p-5 shadow-2xl shadow-black/15 md:p-7">
+        </div>
+      </section>
+      <ContactSection profile={profile} />
+      <FeaturedVideos profile={profile} videos={videos} loading={loading} onOpen={onOpen} />
+      <section className="section-space border-y border-white/[.06] bg-white/[.012]">
+        <div className="shell">
+          <div className="rounded-[1.75rem] border border-white/[.08] bg-black/20 p-5 shadow-2xl shadow-black/15 md:p-7">
             <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <div className="eyebrow"><span className="h-px w-7 bg-solar" />Socials</div>
@@ -38,7 +45,6 @@ export default function HomePage({ profile, socials }: { profile: Profile; socia
           </div>
         </div>
       </section>
-      <ContactSection profile={profile} />
     </>
   )
 }

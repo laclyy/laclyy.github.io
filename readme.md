@@ -45,6 +45,10 @@ Ogni modifica caricata nel branch `main` ripubblica il sito automaticamente. La 
 
 ## Aggiungere un video
 
+Dal pannello `/admin`, nel campo del video o della copertina basta incollare il percorso del cloud, per esempio `video-lacly/video/anime edits/sigma boys/nagi sigma boy(easy).mp4`. Il pannello aggiunge `https://vanzakart.net:8443/` e codifica automaticamente spazi, parentesi e altri simboli, mostrando il link risultante prima del salvataggio. Accetta anche URL completi e mantiene le codifiche già presenti.
+
+Il campo **Sottocategoria** permette di scegliere un valore esistente o scriverne uno nuovo sotto Anime, Videogiochi o GFX. La nuova sottocategoria viene salvata con il video: sarà poi selezionabile per gli altri video della stessa categoria e nei filtri dell’archivio. Lasciando il campo vuoto il lavoro resta nella sola categoria principale.
+
 Apri `public/data/videos.json`. Dentro la sezione `videos`, copia un blocco esistente e incollalo dopo un altro video. Tra due blocchi deve esserci una virgola.
 
 ```json
@@ -68,7 +72,8 @@ Apri `public/data/videos.json`. Dentro la sezione `videos`, copia un blocco esis
 Valori disponibili:
 
 - `type`: `my-edit` oppure `commissioned`.
-- `category`: `anime`, `videogiochi` oppure `gfx` (la sezione `gfx` è dedicata alle immagini/grafiche e non mostra sottofiltri).
+- `category`: `anime`, `videogiochi` oppure `gfx` (la sezione `gfx` è dedicata alle immagini/grafiche).
+- `subcategory`: facoltativa, per esempio `Blue Lock` sotto `anime`. Le sottocategorie presenti nei video appaiono automaticamente nei filtri della categoria principale.
 - `style`: `simple edit`, `vibe edit`, `jugg edit`, `typography`, `promo edit`, `flow edit`, `sigma boy`, `tiktok edit`, `lacly style edit`, `cinematic edit`, `amv`, `gmv` oppure `altro`. Per i GFX puoi lasciare `""` o inserire un'etichetta descrittiva come `banner`, `thumbnail`, `poster`, ecc.
 - `source`: `local`, `direct`, `cloud`, `youtube`, `vimeo`, `dailymotion` oppure `external`.
 - `aspectRatio`: molto consigliato per i video caricati sul server. Serve per aprire subito popup e card nella dimensione corretta, anche prima che il video parta. Puoi usare `16/9`, `9/16`, `1/1`, `4/5`, ecc.
@@ -78,7 +83,7 @@ Valori disponibili:
 
 Per rimuovere un video, elimina l’intero blocco da `{` a `}` e controlla le virgole tra i blocchi rimasti.
 
-Per mostrare un video nella Home imposta `"featured": true`. Usa `false` per lasciarlo soltanto nella pagina Video. La Home mostra al massimo i tre featured più recenti.
+La sezione tra “Need a custom edit?” e “Follow my work” mostra al massimo i tre featured più recenti (`"featured": true`). Se nessun lavoro è featured, mostra automaticamente i tre lavori più recenti, in base al campo `date`. Cliccando una card si apre il normale player del sito.
 
 ## Video esterni
 
@@ -165,7 +170,7 @@ Puoi usare la categoria `gfx` per caricare banner, thumbnail create da te, wallp
 }
 ```
 
-- Nel filtro `Category`, cliccando su **GFX** verranno mostrate solo le immagini, **senza sottofiltri**.
+- Nel filtro `Category`, cliccando su **GFX** verranno mostrate solo le immagini; se presenti, le sottocategorie sono selezionabili.
 - Sulle card GFX apparirà l'icona con l'occhio (`Eye`) invece del tasto play.
 - Cliccando sulla card si aprirà l'immagine in alta definizione nella modale.
 
