@@ -1915,7 +1915,7 @@
       "featured": false,
       "date": "2026-07-10"
     },
-        {
+    {
       "title": "reze vs denji flow edit",
       "description": "reze vs denji flow edit by Lacly.",
       "type": "my-edit",
@@ -1934,7 +1934,7 @@
       "featured": false,
       "date": "2026-07-10"
     },
-        {
+    {
       "title": "riyo reaper flow edit 60fps",
       "description": "riyo reaper flow edit 60fps by Lacly.",
       "type": "my-edit",
@@ -2029,7 +2029,7 @@
       "featured": false,
       "date": "2026-07-10"
     },
-        {
+    {
       "title": "rl x makima edit",
       "description": "rl x makima edit by Lacly.",
       "type": "my-edit",
@@ -2050,7 +2050,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "Junko Enoshima jugg edit",
       "description": "Junko Enoshima jugg edit by Lacly.",
       "type": "my-edit",
@@ -2060,7 +2060,7 @@
       "videoUrl": "https://vanzakart.net:8443/video-lacly/video/anime%20edits/jugg%20edits/Junko%20Enoshima%20jugg%20edit.mp4",
       "source": "cloud",
       "aspectRatio": "1440/1080",
-      "difficulty": "very hard",
+      "difficulty": "hard",
       "masterpiece": true,
       "tags": [
         "anime",
@@ -2069,7 +2069,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "Commission Edit for xevilstrafe on TikTok, Amelia Edit",
       "description": "Commission edit for xevilstrafe on TikTok, Amelia Edit.",
       "type": "commissioned",
@@ -2088,7 +2088,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "outlet coco makima edit",
       "description": "outlet coco makima edit by Lacly.",
       "type": "my-edit",
@@ -2107,7 +2107,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "Kizumonogatari I Araragi and Hanekawa first meet vibe edit",
       "description": "Kizumonogatari I Araragi and Hanekawa first meet vibe edit by Lacly.",
       "type": "my-edit",
@@ -2126,7 +2126,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "Rl Jugg Edit",
       "description": "Rl Jugg Edit by Lacly.",
       "type": "my-edit",
@@ -2145,7 +2145,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "rl trailer edit",
       "description": "rl trailer edit by Lacly.",
       "type": "my-edit",
@@ -2161,10 +2161,10 @@
         "rocket league",
         "vibe edit"
       ],
-      "featured": false,
+      "featured": true,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "kizumonogatari vibe edit",
       "description": "kizumonogatari vibe edit by Lacly.",
       "type": "my-edit",
@@ -2183,7 +2183,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "Kurumi Vibe Edit",
       "description": "Kurumi vibe edit by Lacly.",
       "type": "my-edit",
@@ -2202,7 +2202,7 @@
       "featured": false,
       "date": "2026-08-18"
     },
-        {
+    {
       "title": "dopey thumbnail angelcore music pack",
       "description": "dopey thumbnail angelcore music pack by Lacly.",
       "type": "my-edit",
@@ -2219,9 +2219,8 @@
       ],
       "featured": false,
       "date": "2026-08-20"
-    }
-    ,
-        {
+    },
+    {
       "title": "violet evergarden vibe edit (eyes without a face)",
       "description": "violet evergarden vibe edit (eyes without a face) by Lacly.",
       "type": "my-edit",
@@ -2237,7 +2236,7 @@
         "anime",
         "vibe edit"
       ],
-      "featured": false,
+      "featured": true,
       "date": "2026-09-05"
     }
   ]
