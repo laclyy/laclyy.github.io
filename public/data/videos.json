@@ -2346,6 +2346,24 @@
       ],
       "featured": false,
       "date": "2026-10-16"
+    },
+    {
+      "title": "onimai everytime we touch edit",
+      "description": "onimai everytime we touch edit by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "lacly rainbow style",
+      "thumbnailUrl": "https://vanzakart.net:8443/video-lacly/thumbnails/anime%20edits/onimai%20everytime%20we%20touch%20edit.png",
+      "videoUrl": "https://vanzakart.net:8443/video-lacly/video/anime%20edits/onimai%20everytime%20we%20touch%20edit.mp4",
+      "source": "cloud",
+      "aspectRatio": "1920/1080",
+      "difficulty": "very hard",
+      "masterpiece": true,
+      "tags": [
+        "anime"
+      ],
+      "featured": false,
+      "date": "2026-10-16"
     }
   ]
 }
