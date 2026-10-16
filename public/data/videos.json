@@ -2382,6 +2382,24 @@
       ],
       "featured": false,
       "date": "2026-10-16"
+    },
+    {
+      "title": "ncs on top",
+      "description": "ncs on top by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "jugg edit",
+      "thumbnailUrl": "https://vanzakart.net:8443/video-lacly/thumbnails/anime%20edits/ncs%20on%20top.png",
+      "videoUrl": "https://vanzakart.net:8443/video-lacly/video/anime%20edits/ncs%20on%20top.mp4",
+      "source": "cloud",
+      "aspectRatio": "1920/950",
+      "difficulty": "very hard",
+      "masterpiece": true,
+      "tags": [
+        "anime"
+      ],
+      "featured": false,
+      "date": "2026-10-16"
     }
   ]
 }
