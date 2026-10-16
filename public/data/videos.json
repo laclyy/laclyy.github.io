@@ -2364,6 +2364,24 @@
       ],
       "featured": false,
       "date": "2026-10-16"
+    },
+    {
+      "title": "nezuko simple edit",
+      "description": "nezuko simple edit by Lacly.",
+      "type": "commissioned",
+      "category": "anime",
+      "style": "commission edit",
+      "thumbnailUrl": "https://vanzakart.net:8443/video-lacly/thumbnails/anime%20edits/nezuko%20simple%20edit.png",
+      "videoUrl": "https://vanzakart.net:8443/video-lacly/video/anime%20edits/nezuko%20simple%20edit.mp4",
+      "source": "cloud",
+      "aspectRatio": "1080/1200",
+      "difficulty": "medium",
+      "masterpiece": false,
+      "tags": [
+        "anime"
+      ],
+      "featured": false,
+      "date": "2026-10-16"
     }
   ]
 }
