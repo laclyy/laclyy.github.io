@@ -1934,6 +1934,25 @@
       ],
       "featured": false,
       "date": "2026-11-22"
+    },
+    {
+      "title": "Violet Evergarden Moonlight",
+      "description": "Violet Evergarden Moonlight by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "vibe edit",
+      "thumbnailUrl": "https://vanzakart.net:8443/video-lacly/thumbnails/anime%20edits/vibe%20edits/Violet%20Evergarden%20Moonlight.png",
+      "videoUrl": "https://vanzakart.net:8443/video-lacly/video/anime%20edits/vibe%20edits/Violet%20Evergarden%20Moonlight.mp4",
+      "source": "cloud",
+      "aspectRatio": "1900/950",
+      "difficulty": "very hard",
+      "masterpiece": true,
+      "tags": [
+        "vibe",
+        "anime"
+      ],
+      "featured": false,
+      "date": "2026-11-22"
     }
   ]
 }
