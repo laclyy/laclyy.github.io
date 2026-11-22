@@ -1915,6 +1915,25 @@
       ],
       "featured": false,
       "date": "2026-11-22"
+    },
+    {
+      "title": "Witch on the Holy Night",
+      "description": "Witch on the Holy Night by Lacly.",
+      "type": "my-edit",
+      "category": "anime",
+      "style": "flow edit",
+      "thumbnailUrl": "https://vanzakart.net:8443/video-lacly/thumbnails/anime%20edits/flow%20edits/Witch%20on%20the%20Holy%20Night.png",
+      "videoUrl": "https://vanzakart.net:8443/video-lacly/video/anime%20edits/flow%20edits/Witch%20on%20the%20Holy%20Night.mp4",
+      "source": "cloud",
+      "aspectRatio": "1900/1000",
+      "difficulty": "very hard",
+      "masterpiece": false,
+      "tags": [
+        "flow",
+        "anime"
+      ],
+      "featured": false,
+      "date": "2026-11-22"
     }
   ]
 }
