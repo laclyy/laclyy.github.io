@@ -1972,6 +1972,26 @@
       ],
       "featured": false,
       "date": "2026-11-22"
+    },
+    {
+      "title": "K On X Rl",
+      "description": "K On X Rl by Lacly.",
+      "type": "my-edit",
+      "category": "videogiochi",
+      "style": "trend edit",
+      "thumbnailUrl": "https://vanzakart.net:8443/video-lacly/thumbnails/game%20edits/rocket%20league%20edits/trend%20edits/K-On%20X%20Rl.png",
+      "videoUrl": "https://vanzakart.net:8443/video-lacly/video/game%20edits/rocket%20league%20edits/trend%20edits/K-On%20X%20Rl.mp4",
+      "source": "cloud",
+      "aspectRatio": "1350/1080",
+      "difficulty": "very hard",
+      "masterpiece": true,
+      "tags": [
+        "rocket league",
+        "trend",
+        "gaming"
+      ],
+      "featured": false,
+      "date": "2026-11-22"
     }
   ]
 }
